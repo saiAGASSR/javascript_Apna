@@ -1,0 +1,150 @@
+--------------------------
+1. Basic setup
+--------------------------
+
+
+
+https://www.airbnb.co.in/
+
+
+
+Apnas steps 
+
+Database setup and 
+REST API's for CRUD 
+
+create folder 
+npm init -y
+npm i ejs
+npm i mongoose 
+touch app.js
+
+
+to connect with database : start mongodb services  ..    type mongosh   in terminal and show database
+
+
+--------------------------
+2. Creating Model 
+--------------------------
+
+Create Model folder in project directory ..
+all models will be listed over their 
+
+
+
+--------------------------
+3. Init db 
+--------------------------
+make a folder for initializing DB  name the folder as db 
+
+
+--------------------------
+4. Creating Index route /Listings 
+--------------------------
+
+create a query to find all the data from listing collection and store them in a variable ...
+make a ejs directory and create allListings and render it 
+
+First we should link the ejs directory using path from node 
+
+In views  listing folder 
+and Users folder
+
+--------------------------
+5. Creating NavBar 
+--------------------------
+our own or bootstrap 
+ to include bootstrap 
+
+ add css link before </head>
+ add js link before </body>
+
+ create a includes foler and crate a navbar.ejs file 
+ include in the boilerplate.ejs   using <% include  (""filepath )  %>
+
+
+
+in nav bar    icon 
+fontawesome  compass
+fontawesome cdn 
+
+--------------------------
+5. Creating Footer  
+--------------------------
+
+she has created 1 div and 3 sub divs in that 
+for the main div she has given display flex . 
+then after that given width 100 % for the top and bottom div .......
+and then to get contents center  and vertically center    she has applied the desplay flex again in  top and bottom div 
+
+
+what i have done is to give flex direction column 
+
+--------------------------
+5. All listings Styling 
+--------------------------
+
+bootstrap  
+select a card component 
+
+keep it in for loop in allListings 
+add title and price in p 
+style  the body from googleFonts 
+give cols , row   row-cols-lg-3   medium small extra small   responsive  bootstrap class 
+
+
+keep each item in  anchortag and href to below ref
+
+  <!-- <li> <a href="/listings/<%= eachList._id %>"> <%= eachList.title %> </a>   </li> -->
+  <!-- <li> <a href="/listings/<%= eachList._id %>"> <%= eachList.title %> </a>   </li> --> 
+
+
+
+--------------------------
+6. New listing  Styling 
+--------------------------
+Add labels for all input tags 
+give them class form label 
+
+add class form-control to all input tags 
+
+add the form and label in a div 
+
+add the entire form in a div with class row 
+and wrap the form in a div with col-md-8 
+
+to get the footer at bottom 
+
+
+give body styling as 
+display flex
+flex direction as column 
+
+
+and body  in boiler plate div classname is container and 
+git the flex = 1;
+
+
+--------------------------
+7. edit listing  Styling 
+--------------------------
+
+same like new listing 
+
+--------------------------
+8. show single listing  listing  Styling 
+--------------------------
+
+get a card component from bootstrap 
+give the img tag a    an attribute class 
+name it show-listing-image
+give its height as some vh 
+
+
+wrap entire in row class 
+
+    give heading col-8 
+    image div -6 col 
+    
+
+
