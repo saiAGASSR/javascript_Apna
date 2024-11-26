@@ -1,0 +1,7 @@
+.AmazonCard{
+    margin: 0px 30px 0px 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+}

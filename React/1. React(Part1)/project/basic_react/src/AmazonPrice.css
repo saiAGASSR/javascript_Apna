@@ -1,0 +1,19 @@
+.AmazonPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    background-color: #e0c367;
+    border-bottom-right-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+}
+
+
+
+.oldPriceSpan{
+    text-decoration: line-through;
+}
+
+.newPriceSpan{
+    font-weight: 500;
+}
