@@ -1,0 +1,25 @@
+.red {
+    color  :red;
+}
+
+.blue{
+    color: blue;
+}
+
+.divClass {
+    border:  1px solid black;
+    background-color: pink;
+    height: 100px;
+
+}
+
+#btn{
+    background-color: blue;
+    color: white;
+}
+
+.h1Class{
+    text-decoration: underline;
+    color: purple;
+}
+
