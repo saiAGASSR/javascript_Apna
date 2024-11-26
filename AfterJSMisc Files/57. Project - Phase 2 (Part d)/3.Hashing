@@ -1,0 +1,26 @@
+the function which takes input and generates output of string of same length .
+it will have the outpput from input 
+but cannot generaete the same input from its returned output 
+
+if we pass the password  as input it will generate a string 
+but we cannot generate that password from the output that is generated from that password  
+
+one way functions 
+we cannot guess the input from the output 
+like modulues function and absolute function 
+
+Math,abs(-5) = 5 
+Math,abs(5) = 5 
+
+3%3 = 0 ;
+6%3 = 0 ;
+
+Here we are getting 5 from both -5 and 5 we cannot guess exactly from where it came from .
+https://www.google.com/search?q=sha256+generator&oq=Sha256+ge&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDY1MjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+
+https://academo.org/demos/SHA-256-hash-generator/
+
+SHA256 is not practically used 
+
+
+https://www.beckershospitalreview.com/cybersecurity/40-most-common-passwords-of-2024.html

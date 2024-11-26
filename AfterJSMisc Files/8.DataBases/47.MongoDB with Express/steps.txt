@@ -1,0 +1,35 @@
+1. Initi the package.json  --------- npm init -y 
+2. require or import express for server connection  and routing ...
+    install packages express 
+    npm i express
+    import express from 'express ' 
+    https://www.npmjs.com/package/express
+
+    const app = express();
+
+
+3.Install ejs 
+    https://www.npmjs.com/package/ejs
+    npm i ejs 
+    Create views directory 
+    set views path 
+
+4.Install mongoose 
+    npm i mongoose
+    https://www.npmjs.com/package/mongoose
+
+
+Process 1 
+    import express from 'express';
+    const app = express();
+
+    app.listen(8080, ()=> {
+        console.log("listening on port number 8080");
+    })
+
+    nodemon index.js
+
+
+5. Production Schemas DB 
+
+Create a model folder 

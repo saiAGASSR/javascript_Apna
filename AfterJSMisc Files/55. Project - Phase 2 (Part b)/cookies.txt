@@ -1,0 +1,17 @@
+the need of cookies .
+http cookies   web cookies   server cookies
+
+user preferences 
+tracking 
+session management 
+
+name value pair 
+
+it stores how you came to this page like path history 
+server send cookies 
+app.js 
+
+https://expressjs.com/en/5x/api.html#res.cookie
+
+
+https://www.npmjs.com/package/cookie-parser

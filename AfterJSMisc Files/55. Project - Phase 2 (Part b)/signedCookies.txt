@@ -1,0 +1,4 @@
+take example of buying a frroti  etc it will be sealed 
+we cannot delete cookies from browser of we pass an argument with signed as true 
+app.use(cookieParser("secretcode"));
+protect from raw form .

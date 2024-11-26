@@ -1,0 +1,16 @@
+https://www.npmjs.com/package/express-session
+
+a cookie is used to track the session .
+once a session is started its value is set default 
+cookie
+Settings object for the session ID cookie. The default value is { path: '/', httpOnly: true, secure: false, maxAge: null }.
+
+if we logged in linkedin  once and closes the tab . 
+
+it will be bydefault loggedin . 
+
+Git hub 
+loggedin
+after 1 week we should relogin 
+fb - 21 days 
+information will be saved in cookies in browser . 

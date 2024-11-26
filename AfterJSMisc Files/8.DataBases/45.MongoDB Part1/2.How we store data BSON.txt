@@ -1,0 +1,45 @@
+JSON -- --------- 
+All data is store in string format 
+Difficult to parse data 
+
+
+it is solved by BSON data format 
+
+We will give the Mongo db    data in the JSON format only ... mongo will convert the data into the Binary JSON format and store in the memory 
+
+https://www.mongodb.com/resources/basics/json-and-bson
+
+
+
+
+https://www.mongodb.com/docs/manual/crud/
+
+
+
+
+mongosh
+
+show dbs
+ 
+db.dbname.insert();
+db.dbname.insertMany([{},{}]);
+db.dbname.find();
+
+db.collectionName.insert();
+db.collectionName.insertMany([{},{}]);
+db.collectionName.find();
+
+
+
+db.collectionName.find();     returns an reference of object   for looping the array 
+db.collectionName.findOne();  returns an actual object 
+
+
+$gt
+$in
+
+
+https://www.mongodb.com/docs/manual/tutorial/query-documents/
+
+
+https://www.mongodb.com/docs/manual/reference/operator/

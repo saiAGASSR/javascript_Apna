@@ -1,0 +1,41 @@
+express router is used for simplification of readability of code . 
+express router is not mandatory to use .
+but it should  be used for creating  better websites  . 
+
+restructuring the app.js file into small parts 
+
+express.router() method returns an object which is stored in router 
+const router = express.router();
+
+
+
+similar routes  which starts with same /users  /posts 
+
+
+const app = express();
+app.get 
+
+const router = express.router();
+
+router.get 
+does the same 
+
+router is an object 
+so we are exporting the object 
+
+importing the router object in app.js
+then settting the config 
+
+
+app.use("/",users)
+
+here users is the imported object or file 
+
+refactoring 
+
+app.use("/users",users);
+
+cmd d 
+
+./  going to  parent directory iterating by one  from present directory
+../  going to  parent directory iterating by two  from present directory

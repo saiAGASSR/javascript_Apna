@@ -1,0 +1,52 @@
+an attempt to make our session stateful .
+
+some apps like zomato swiggy etc alows us to ad dthe items in cart without log in . but   while making a payment it asks us to create or sign up . 
+
+These actions can be performed using the that particular session and session id . 
+the user performing the actions all in particular one session   has session id 
+
+server stores the items in json with particular sessionID     and sends only the session ID to the client   
+That sessionID will be stored in browser using cookie . 
+
+AS user goes from electronics to beauty pages  ..
+because cookies will store the information even user goes to other pages . so that saved items in carts should be stored in cookies 
+y we are sending only session ID   why we are not sending total cart object ? because cookies have limit in comparision to temporary storage and they are not secure 
+
+we have so many temperary storage options available . 
+
+
+
+we will use this basic code for sessions  config
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+
+
+
+Flow 
+Expressio Session 
+1 - temporary storage it stores the data 
+2. it serves the cookie id to the frontend in the form of cookie . 
+
+
+secret
+Required option
+
+This is the secret used to sign the session ID cookie. 
+
+
+
+Express session storing and utilizing data 
+
+for every request we will have request session object bydefault . 
+we can create a new variable or key   like count which we have created before .
+
+the same assigned value can be accessed in another callback function . 
+
+so if we switch between the routes as single sessiion is running 
+
+the use of sessions is  storing usefull information in sessions so that we can utilize them in different routes .

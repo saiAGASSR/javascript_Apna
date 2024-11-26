@@ -1,0 +1,1511 @@
+{
+  "message": "",
+  "status": "SUCCESS",
+  "code": 200,
+  "tracking_id": "3a6c8861-156c-4c41-ad87-0e73dfedad79_374101e8-53e7-4338-be29-4e1e1bea04ca_VariantA_Algoid2_cd",
+  "extra_fields": {
+    "total_recommendations": 100
+  },
+  "results": [
+    {
+      "contentId": "42398_movie",
+      "contentType": "movie",
+      "contentTitle": "Sita - Sangharsa Ra Kahani",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/464ed538-94c0-4602-1e6a-69659a633100/desktopTrailer",
+      "contentGenre": "Drama",
+      "partner": "Aao Nxt",
+      "language": "Odia",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 22,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "227086_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Dasyu Ranjan(Odia)",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/11061270-d271-420c-e37e-6ef51e3ea100/desktopTrailer",
+      "contentGenre": "animated-shorts",
+      "partner": "Aao Nxt",
+      "language": "Odia",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 6,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "33493_movie",
+      "contentType": "movie",
+      "contentTitle": "Runanubandha",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/94520741-f2f6-421f-e7b7-c6e84f1b0800/desktopTrailer",
+      "contentGenre": "Drama",
+      "partner": "Aao Nxt",
+      "language": "Bengali",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 6,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "261670_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Dasyu Ranjan(English)",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/1cc4ff0f-6809-4e07-5ab3-9f9860bf6f00/desktopTrailer",
+      "contentGenre": "animated-shorts",
+      "partner": "Aao Nxt",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 3,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "36808_movie",
+      "contentType": "movie",
+      "contentTitle": "Malajanha",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/c60ea330-d9ce-4e81-1b59-697aa6d46d00/desktopTrailer",
+      "contentGenre": "Drama",
+      "partner": "Aao Nxt",
+      "language": "Odia",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 3,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "33208_movie",
+      "contentType": "movie",
+      "contentTitle": "Valentine's Drama",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/02a65cb1-80d7-413c-a702-e2bcb2e23100/desktopTrailer",
+      "contentGenre": "Comedy",
+      "partner": "Aao Nxt",
+      "language": "Odia",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 2,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42000_movie",
+      "contentType": "movie",
+      "contentTitle": "Punarmilana",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/6d83c7d2-d89a-42c0-24db-2ac77711c700/desktopTrailer",
+      "contentGenre": "Drama",
+      "partner": "Aao Nxt",
+      "language": "Odia",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 2,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "33202_movie",
+      "contentType": "movie",
+      "contentTitle": "Flamma",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/8a08280e-89d5-4593-e44c-abe5911e9000/desktopTrailer",
+      "contentGenre": "Drama",
+      "partner": "Aao Nxt",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 0,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "33206_movie",
+      "contentType": "movie",
+      "contentTitle": "The Black Tome Of Alsophocus",
+      "imgUrl": "https://ibee-cdn.net/cdn-cgi/imagedelivery/OcLeJlWAT97u4ZIYGPgNPw/2fc0bb6a-3dfa-4f2f-d10e-bc3e48151500/desktopTrailer",
+      "contentGenre": "Drama",
+      "partner": "Aao Nxt",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 0,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42415_movie",
+      "contentType": "movie",
+      "contentTitle": "Vedaa",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5636183/list/270x152/1170x658withlogo7b2d6704f9534ade9e672e53739b3ac4f74e1b38fca04c7da8dc53ed2ce9dfa2.jpg",
+      "contentGenre": "action,thriller,suspense",
+      "partner": "Zee5",
+      "language": "Hindi,Tamil,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 4737,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433111_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Red Room",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/hungama1/c/1/e25/2b3/122192534/122192534_1280x720.jpg",
+      "contentGenre": "thriller,romantic",
+      "partner": "Hungama",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 1788,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433277_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Checkmate",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/hungama1/c/1/dac/f74/122571476/122571476_1280x720.jpg",
+      "contentGenre": "thriller",
+      "partner": "Hungama",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 1651,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42416_movie",
+      "contentType": "movie",
+      "contentTitle": "Rose Rosy Te Gulab",
+      "imgUrl": "https://images.chaupal.tv/f6c64f5587caeb97fd284145c7c2cfb1/f6c64f5587caeb97fd284145c7c2cfb1",
+      "contentGenre": "romance,comedy",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 1530,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42441_movie",
+      "contentType": "movie",
+      "contentTitle": "Sarfira",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2233/1728569342233-h",
+      "contentGenre": "drama",
+      "partner": "Hotstar",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 1285,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433044_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Reality Ranis of the Jungle",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/cfpafk.jpeg",
+      "contentGenre": "adventure",
+      "partner": "Discovery",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 928,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42332_movie",
+      "contentType": "movie",
+      "contentTitle": "Jatt & Juliet 3",
+      "imgUrl": "https://images.chaupal.tv/f9acce693039bfe8d1daf4e6661834c7/f9acce693039bfe8d1daf4e6661834c7",
+      "contentGenre": "comedy,romance",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 912,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41839_movie",
+      "contentType": "movie",
+      "contentTitle": "Rautu Ka Raaz",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5577122/list/270x152/1170x658withlogoc31dd4bb37024db29b8a674af1dd9b2c44bef59b368440d7a14217a369c57b7a.jpg",
+      "contentGenre": "crime,drama,mystery",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 910,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433057_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Raat Jawaan Hai",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/blitz_assets/1790006094/thumbnail/1728543144987_RaatJawaanHai_2_Landscape_Thumb.jpg",
+      "contentGenre": "comedy",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 902,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "10183_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Tanaav",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/tanaavs2_5_landscape_thumb1.jpg",
+      "contentGenre": "action",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 892,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433259_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Videshi Bahu",
+      "imgUrl": "https://media.stage.in/show/horizontal/large/showImage-1729361115269.jpg",
+      "contentGenre": "storytelling",
+      "partner": "STAGE",
+      "language": "Rajasthani",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 848,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42261_movie",
+      "contentType": "movie",
+      "contentTitle": "Berlin",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5615527/list/270x152/1170x658withlogo9ccd6df047a2402b8091b5db8ec3a197c74a4f6458af4ea19e4c8603ac673e8f.jpg",
+      "contentGenre": "thriller,drama",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 820,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "74036_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Aarambh",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/gsthat.jpeg",
+      "contentGenre": "thriller",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 739,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42092_movie",
+      "contentType": "movie",
+      "contentTitle": "Bhaiyya Ji",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5595126/list/270x152/1170x658withlogo8679029900794478b337fd4abfd9b4028710d040858c43669dca10e758a0fd2b.jpg",
+      "contentGenre": "action,drama,crime",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 696,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "35040_movie",
+      "contentType": "movie",
+      "contentTitle": "Sam Bahadur",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5500337/list/270x152/1170x658withlogoc2afba005d514f219c11e19a17a4d36d.jpg",
+      "contentGenre": "biography,drama,war",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 651,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "432947_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Sa Re Ga Ma Pa 2024",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-6-4z5622412/list/270x152/1170x658withlogof76b09185e2944b58938ff2d40e7971c7d2a63bc5ed44549be61b8f0fdd17b9a.jpg",
+      "contentGenre": "reality",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 639,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42364_movie",
+      "contentType": "movie",
+      "contentTitle": "The Signature",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5629005/list/270x152/1170x658withlogo6747fe116b764b7fad6b3d166d5fa7cf47c19be069f541cea3ec52dfb7f495f0.jpg",
+      "contentGenre": "drama,family",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 627,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42285_movie",
+      "contentType": "movie",
+      "contentTitle": "Kudi Haryane Val Di",
+      "imgUrl": "https://images.chaupal.tv/17bc5de687def6a187d6f496880dab6c/17bc5de687def6a187d6f496880dab6c",
+      "contentGenre": "comedy,romance",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 624,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "6_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Virgin At 27",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/mkzrlq.jpeg",
+      "contentGenre": "comedy,romance",
+      "partner": "Watcho",
+      "language": "Hindi,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 621,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42505_movie",
+      "contentType": "movie",
+      "contentTitle": "Dharmaveer 2: Mukkam Post Thane",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5642681/list/270x152/1170x658withlogof03f03338ddf4e0c8935745087a9e84df6779945154b42839025816c70051898ed92b543d5ae4fa3bfb6ce69dc491f9d.jpg",
+      "contentGenre": "drama,biography",
+      "partner": "Zee5",
+      "language": "Marathi,Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 619,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42495_movie",
+      "contentType": "movie",
+      "contentTitle": "Ardab Mutiyaran",
+      "imgUrl": "https://images.chaupal.tv/2b510d65b8132c8c0e5dcbaa841ed805/2b510d65b8132c8c0e5dcbaa841ed805",
+      "contentGenre": "drama,comedy",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 614,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "11270_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Bollywood Gossips",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/tvshows-icon-xcvzyq16ut.jpeg",
+      "contentGenre": "entertainment",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 602,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41939_movie",
+      "contentType": "movie",
+      "contentTitle": 65,
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/65_landscape_thumb.jpg",
+      "contentGenre": "action",
+      "partner": "Sony Liv",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 548,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41881_movie",
+      "contentType": "movie",
+      "contentTitle": "Kakuda",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5581177/list/270x152/1170x658withlogo697299a878b24b5b8f31cb8d9b76c346.jpg",
+      "contentGenre": "horror,comedy,romance,drama",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 511,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42389_movie",
+      "contentType": "movie",
+      "contentTitle": "Lambran Da Laana",
+      "imgUrl": "https://images.chaupal.tv/6a1eb8ebb20643d2d6fc9531cc636749/6a1eb8ebb20643d2d6fc9531cc636749",
+      "contentGenre": "comedy,drama",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 502,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "432702_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "1000 Babies",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/8338/1729187048338-h",
+      "contentGenre": "thriller,crime",
+      "partner": "Hotstar",
+      "language": "Malayalam,Tamil,Hindi,Telugu,Marathi,Bengali,Kannada",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 502,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41582_movie",
+      "contentType": "movie",
+      "contentTitle": "Bastar: The Naxal Story",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5559828/list/270x152/1170x658withlogo533fae82b9de49c9bc9c31950516b7e252919649d44248928134af96c3c43dd4.jpg",
+      "contentGenre": "crime,drama",
+      "partner": "Zee5",
+      "language": "Hindi,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 484,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "432821_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Flight Attendant",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/hungama1/c/1/0aa/368/121579309/121579309_1280x720.jpg",
+      "contentGenre": "drama",
+      "partner": "Hungama",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 477,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "15414_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Gyaarah Gyaarah",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-6-4z5371966/list/270x152/1170x658withlogo37c06b5ee5194c37a77d6beab6d55d9c887267618600436ba4db568e0db81663.jpg",
+      "contentGenre": "thriller,drama",
+      "partner": "Zee5",
+      "language": "Hindi,Tamil,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 452,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "10172_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Taarak Mehta Ka Ooltah Chashmah",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/tmkoc22_29june_landscape_thumb.jpg",
+      "contentGenre": "comedy",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 434,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42469_movie",
+      "contentType": "movie",
+      "contentTitle": "Shaatar",
+      "imgUrl": "https://images.chaupal.tv/da9306f7f82de9c79cbad178a1994b09/da9306f7f82de9c79cbad178a1994b09",
+      "contentGenre": "crime,thriller",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 424,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42289_movie",
+      "contentType": "movie",
+      "contentTitle": "Kill",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/160/1725024490160-h",
+      "contentGenre": "action,thriller",
+      "partner": "Hotstar",
+      "language": "Hindi,Malayalam,Tamil,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 413,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42485_movie",
+      "contentType": "movie",
+      "contentTitle": "Jhamkudi",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/Jhamkudi/670ccb07c47b71e277ce75d0/medium_16_9_1729144544.jpg?1729158027",
+      "contentGenre": "comedy,mystery,horror",
+      "partner": "Shemaroo me",
+      "language": "Gujarati",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 402,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "24159_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "GillHarry",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/fxdvut.jpeg",
+      "contentGenre": "romance",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 373,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42355_movie",
+      "contentType": "movie",
+      "contentTitle": "Colourrs of Love",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5625776/list/270x152/1170x658withlogo8f991248ea404d63b22a0eaacd937928c1682b0da4294c849d76e77c46227234.jpg",
+      "contentGenre": "romance,drama",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 363,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "15539_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Cricket",
+      "imgUrl": "https://www.fancode.com/skillup-uploads/cms-media/Cricket_Fallback_Old_match-card.jpg",
+      "contentGenre": "sports",
+      "partner": "FanCode",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 352,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "431596_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "SSS: Sex,Secret Aur Saaya",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/hungama1/c/1/dd9/dba/107129966/107129966_1280x720.jpg",
+      "contentGenre": "thriller",
+      "partner": "Hungama",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 341,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41950_movie",
+      "contentType": "movie",
+      "contentTitle": "Aastha",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/hungama1/c/1/0fc/bc7/120044691/120044691_1280x720.jpg",
+      "contentGenre": "thriller",
+      "partner": "Hungama",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 333,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "33388_movie",
+      "contentType": "movie",
+      "contentTitle": "Gadar 2",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5437988/list/270x152/1170x658withlogo58343d0814104dc19596a5cf2fc82900e63c0ff3676441a1959b2489df899339.jpg",
+      "contentGenre": "action,period-drama,war",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 319,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42313_movie",
+      "contentType": "movie",
+      "contentTitle": "Love, Sitara",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5622464/list/270x152/1170x658withlogo37478c63c4c24f98a90e8dd89713cf20008a6b2f879d48879a43313b70d0a80b76f0046f0b7341da82502958c1eb1f2d.jpg",
+      "contentGenre": "romance,drama,family",
+      "partner": "Zee5",
+      "language": "Hindi,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 304,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "432739_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Murshid",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-6-4z5612057/list/270x152/1170x658withlogofc0751d96ffd4e50a5eb1dc176840181e136e49415754a21a31cb51e4348aeb9.jpg",
+      "contentGenre": "crime,thriller",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 303,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42260_movie",
+      "contentType": "movie",
+      "contentTitle": "Rode College",
+      "imgUrl": "https://images.chaupal.tv/7931f17c219bd042bf8b28308c80867b/7931f17c219bd042bf8b28308c80867b",
+      "contentGenre": "action,political",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 271,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "430504_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Naked and Afraid",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/1_discoveryglobal-224208-012-in-show-thumbnail-16x9.jpg",
+      "contentGenre": "adventure",
+      "partner": "Discovery",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 270,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "9936_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Kaun Banega Crorepati",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/kbc2024_12_landscape_thumb.jpg",
+      "contentGenre": "game-show",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 262,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42103_movie",
+      "contentType": "movie",
+      "contentTitle": "Shayar",
+      "imgUrl": "https://images.chaupal.tv/7fbd47ed601fd2d1fa2be5cf9825e772/7fbd47ed601fd2d1fa2be5cf9825e772",
+      "contentGenre": "drama,romance",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 255,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42497_movie",
+      "contentType": "movie",
+      "contentTitle": "Carved",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2586/1729237742586-h",
+      "contentGenre": "drama,comedy,horror",
+      "partner": "Hotstar",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 250,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "376097_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Shrimad Ramayan",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/blitz_assets/1700001378/thumbnail/1723468525938_RAMAYAN_5_Landscape_Thumb.jpg",
+      "contentGenre": "mythology",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 240,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42240_movie",
+      "contentType": "movie",
+      "contentTitle": "Chanchal Haseena",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/Chanchal-Haseena/66c49d87b1e0d2940cfca553/medium_16_9_1727694001.jpg?1727937381",
+      "contentGenre": "drama,emotional",
+      "partner": "Shemaroo me",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 236,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42215_movie",
+      "contentType": "movie",
+      "contentTitle": "Munjya",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/5813/1724368015813-h",
+      "contentGenre": "horror,comedy",
+      "partner": "Hotstar",
+      "language": "Hindi,Tamil,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 234,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "6272_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Taaza Khabar",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/7446/1728134857446-h",
+      "contentGenre": "thriller,fantasy,drama",
+      "partner": "Hotstar",
+      "language": "Hindi,Tamil,Telugu,Bengali,Marathi,Malayalam,Kannada",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 232,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42302_movie",
+      "contentType": "movie",
+      "contentTitle": "Thalavan",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/blitz_assets/1590012844/thumbnail/1725883807509_Thalavan_hindi_set2_Landscape_thumb.jpg",
+      "contentGenre": "action",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 225,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42489_movie",
+      "contentType": "movie",
+      "contentTitle": "Aye Zindagi",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5639785/list/270x152/1170x658withlogo876253ab2b8c40239d4dbd9748db5823035aa829af19421ebc123238e4d8096e.jpg",
+      "contentGenre": "drama",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 222,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42335_movie",
+      "contentType": "movie",
+      "contentTitle": "Toofan.",
+      "imgUrl": "https://legacy.asset.viewlift.com/7fa0ea9a-9799-4417-99f5-cbb5343c551d/images/2024/10/6/1728189900506_1280x720_32_16x9Images.jpg",
+      "contentGenre": "action-thriller",
+      "partner": "Hoichoi",
+      "language": "Bengali",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 221,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42390_movie",
+      "contentType": "movie",
+      "contentTitle": "Muklawa",
+      "imgUrl": "https://images.chaupal.tv/4b14c784d6d4744e0e05f0c2bd2975ab/4b14c784d6d4744e0e05f0c2bd2975ab",
+      "contentGenre": "romance,comedy",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 221,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "388341_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "State v/s Ahuja",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/alkxxf.jpeg",
+      "contentGenre": "drama,crime",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 211,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "15540_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Football",
+      "imgUrl": "https://www.fancode.com/skillup-uploads/cms-media/Football_Fallback_Old_match-card.jpg",
+      "contentGenre": "sports",
+      "partner": "FanCode",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 206,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "432694_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Sarpanchi 2024",
+      "imgUrl": "https://images.chaupal.tv/650b21081b25f627cf853dbd2bc9ec21/650b21081b25f627cf853dbd2bc9ec21",
+      "contentGenre": "drama,political",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 205,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "37061_movie",
+      "contentType": "movie",
+      "contentTitle": "Silence 2: The Night Owl Bar Shootout",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5535878/list/270x152/1170x658withlogo3bbe9bb8a0ee45f686e98e3ce6fac79cacdaa0adf072402cbd75fadfc3699cbd.jpg",
+      "contentGenre": "thriller,crime,drama",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 203,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "375785_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Oh My Wife!",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/ugjrgk.jpeg",
+      "contentGenre": "suspense-thriller",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 196,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "399327_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Paurashpur Season 2",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/Paurashpur-Season-2/64c38f8ec0048d5c089521f6/xl_image_16_9_1723016573.jpg?1724825645",
+      "contentGenre": "drama,thriller",
+      "partner": "Shemaroo me",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 192,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41682_movie",
+      "contentType": "movie",
+      "contentTitle": "House of Lies",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5570253/list/270x152/1170x658withlogo5ef09521cf424987bb60485e44997382.jpg",
+      "contentGenre": "crime,thriller,action,suspense",
+      "partner": "Zee5",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 187,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433045_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Streets of Gold: Mumbai",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/hietne.jpeg",
+      "contentGenre": "lifestyle",
+      "partner": "Discovery",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 187,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "429832_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Flash",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/pneqet.jpeg",
+      "contentGenre": "thriller,suspense",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 185,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "31_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Cheaters",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/vtjpkt.jpeg",
+      "contentGenre": "romantic_drama",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 184,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41587_movie",
+      "contentType": "movie",
+      "contentTitle": "Oye Bhole Oye",
+      "imgUrl": "https://images.chaupal.tv/7252f465ac68f65250c3e1ed08583375/7252f465ac68f65250c3e1ed08583375",
+      "contentGenre": "drama,comedy",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 184,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "19_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Sarhad",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/mzniyx.jpeg",
+      "contentGenre": "action,drama,thriller,terrorism",
+      "partner": "Watcho",
+      "language": "Hindi,Kannada,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 182,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "33239_movie",
+      "contentType": "movie",
+      "contentTitle": "Carry On Jatta 3",
+      "imgUrl": "https://images.chaupal.tv/6d98b9b281415f715bc736e5dddc0d1e/6d98b9b281415f715bc736e5dddc0d1e",
+      "contentGenre": "comedy,drama",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 181,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41725_movie",
+      "contentType": "movie",
+      "contentTitle": "Vekhi Ja Chhaedi Na",
+      "imgUrl": "https://images.chaupal.tv/3c1e6d0bc969616ec8b4f5629950c86e/3c1e6d0bc969616ec8b4f5629950c86e",
+      "contentGenre": "comedy,romance",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 179,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433282_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Ielts Wale Yaar",
+      "imgUrl": "https://images.chaupal.tv/014277ced7bfd5f71621ba149a2a6aa3/014277ced7bfd5f71621ba149a2a6aa3",
+      "contentGenre": "comedy,drama",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 177,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "36737_movie",
+      "contentType": "movie",
+      "contentTitle": "Uma",
+      "imgUrl": "https://legacy.asset.viewlift.com/7fa0ea9a-9799-4417-99f5-cbb5343c551d/images/2022/06/17/1655470136735_uma_1280x720_16x9Images.jpg",
+      "contentGenre": "drama",
+      "partner": "Hoichoi",
+      "language": "Bengali",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 176,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42479_movie",
+      "contentType": "movie",
+      "contentTitle": "Maaya Ka Moh",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/Maaya-Ka-Moh/66ea738fc47b71874ebf893a/medium_16_9_1726556055.jpg?1727937616",
+      "contentGenre": "drama,romantic",
+      "partner": "Shemaroo me",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 176,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "36997_movie",
+      "contentType": "movie",
+      "contentTitle": "Hanu-Man",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5531939/list/270x152/1170x658withlogoc02db067011a453fb00005f8798b6105.jpg",
+      "contentGenre": "action,adventure",
+      "partner": "Zee5",
+      "language": "Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 174,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42327_movie",
+      "contentType": "movie",
+      "contentTitle": "Demonte Colony 2",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5625693/list/270x152/1170x658withlogo3f7ecae8b1c143a4ab221964001a91e19c2c527e56fd4d828ee2531898451f75.jpg",
+      "contentGenre": "horror,thriller,suspense,mystery",
+      "partner": "Zee5",
+      "language": "Tamil",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 174,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "9822_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Gullak",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/gullak4_3_landscape_thumb.jpg",
+      "contentGenre": "comedy",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 174,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41784_movie",
+      "contentType": "movie",
+      "contentTitle": "Parahuna 2",
+      "imgUrl": "https://images.chaupal.tv/8bdb53efb553e0bf85e4305c6ba1f6ce/8bdb53efb553e0bf85e4305c6ba1f6ce",
+      "contentGenre": "comedy,drama",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 172,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433004_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Manvat Murders (Hindi)",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/manvatmurders2_landscape_thumb_1.jpg",
+      "contentGenre": "thriller",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 171,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42486_movie",
+      "contentType": "movie",
+      "contentTitle": "Yevam",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/banner/common/movie/images/1920x1080_Yevam_202230_99a59b75-5cf1-4650-b1d3-59eb6e38e73d.jpg",
+      "contentGenre": "action,drama",
+      "partner": "Sun NXT",
+      "language": "Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 170,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "13895_movie",
+      "contentType": "movie",
+      "contentTitle": "Stree",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/4168/234168-h",
+      "contentGenre": "horror,comedy",
+      "partner": "Hotstar",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 167,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "15409_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Joint Account",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/xjweet.jpeg",
+      "contentGenre": "thriller",
+      "partner": "Watcho",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 166,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42038_movie",
+      "contentType": "movie",
+      "contentTitle": "Pyaar Ishq Aur Possession",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/Pyaar-Ishq-Aur-Possession/668d5c60c47b71d88c64f7f6/medium_16_9_1725445788.jpg?1725530721",
+      "contentGenre": "drama,emotional",
+      "partner": "Shemaroo me",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 166,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "9864_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "India's Best Dancer",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/ibds4_int_landscape_thumb.jpg",
+      "contentGenre": "reality",
+      "partner": "Sony Liv",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 164,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42499_movie",
+      "contentType": "movie",
+      "contentTitle": "Mukaam",
+      "imgUrl": "https://images.chaupal.tv/4b971ea6eae8de1837945ce36b468969/4b971ea6eae8de1837945ce36b468969",
+      "contentGenre": "drama,comedy",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 163,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "30682_movie",
+      "contentType": "movie",
+      "contentTitle": "Annhi Dea Mazaak Ae",
+      "imgUrl": "https://images.chaupal.tv/c111156ecc7feb79ec5823edadb2fb18/c111156ecc7feb79ec5823edadb2fb18",
+      "contentGenre": "romantic-comedy",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 162,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "399305_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Ek Anjaan Rishtey Ka Guilt 2 - Show",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/Ek-Anjaan-Rishtey-Ka-Guilt-2---Show/64b9617bc0048da1e1fa8932/xl_image_16_9_1723016573.jpg?1724841719",
+      "contentGenre": "drama,romance",
+      "partner": "Shemaroo me",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 161,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "12355_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "UEFA Champions League",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/ucl24_25_generic_landscape_thumb_sp_123.jpg",
+      "contentGenre": "football",
+      "partner": "Sony Liv",
+      "language": "English",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 158,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "41879_movie",
+      "contentType": "movie",
+      "contentTitle": "Jatt Nuu Chudail Takri",
+      "imgUrl": "https://images.chaupal.tv/41bd866cf845cb734d18975dbafccbe0/41bd866cf845cb734d18975dbafccbe0",
+      "contentGenre": "comedy,horror",
+      "partner": "Chaupal",
+      "language": "Punjabi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 153,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "433098_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "Reeta Sanyal",
+      "imgUrl": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/7890/1728837277890-h",
+      "contentGenre": "mystery,thriller",
+      "partner": "Hotstar",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 153,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42304_movie",
+      "contentType": "movie",
+      "contentTitle": "Raghu Thatha",
+      "imgUrl": "https://d229kpbsb5jevy.cloudfront.net/zee2/resources/0-0-1z5619726/list/270x152/1170x658withlogo07491ff0677244999e72d9eea1461a1f26e62c33586d4cbd93d78e01ad674627.jpg",
+      "contentGenre": "comedy,drama",
+      "partner": "Zee5",
+      "language": "Tamil,Telugu,Kannada,Malayalam",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 152,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "3_tvseries",
+      "contentType": "tvseries",
+      "contentTitle": "4 Thieves",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/tvshows/images/wztyvt.jpeg",
+      "contentGenre": "comedy",
+      "partner": "Watcho",
+      "language": "Hindi,Kannada,Telugu",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 149,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "42427_movie",
+      "contentType": "movie",
+      "contentTitle": "Laundiyabaazi",
+      "imgUrl": "https://d388d59m61mm0v.cloudfront.net/hungama1/c/1/bab/b99/122117303/122117303_1280x720.jpg",
+      "contentGenre": "comedy",
+      "partner": "Hungama",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 146,
+        "contentSeen": {}
+      }
+    },
+    {
+      "contentId": "35975_movie",
+      "contentType": "movie",
+      "contentTitle": "X Zone",
+      "imgUrl": "https://daex9l847wg3n.cloudfront.net/shemoutputimages/X-Zone/60d35e1ea609d2ffd200001d/medium_16_9_1716178840.jpg?1716794362",
+      "contentGenre": "thriller,horror,erotica",
+      "partner": "Shemaroo me",
+      "language": "Hindi",
+      "rankingInfo": {
+        "userPropertyValue": "all",
+        "orderBy": "uu_played",
+        "orderByValue": 145,
+        "contentSeen": {}
+      }
+    }
+  ]
+}

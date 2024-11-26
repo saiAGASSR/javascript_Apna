@@ -1,0 +1,32 @@
+Session
+
+the time when client interact with server   this single connection is called session 
+
+protocols
+
+the way we send request and response 
+the rules which request and reesponse follow 
+
+
+stateful protocol 
+
+this protocol require the server to save the status and session information 
+
+ftp 
+
+
+http
+
+
+state - all the information available in req              payments    ecommerce websites 
+
+
+the server which has been set by express is all  http . :  which is not storing the status and sessions 
+
+
+example  2 friends 
+1 friend gave 1 500 note to another  that note doesnot have any information 
+but an online transaction has. 
+
+
+THis chapter teaches   being stateless  how you store the the express usefull informations using express sessions .

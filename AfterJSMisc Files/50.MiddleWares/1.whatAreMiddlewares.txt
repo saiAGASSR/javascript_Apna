@@ -1,0 +1,24 @@
+1. The work which is need to be done  before request and response 
+
+2. middleware in Expres are functions that comes into play after the server receives the request and before the response is sent to the client ..
+
+3. methodOverride - HTML Forms  by default get and method post    
+npm packaga   which suppots put delete 
+
+Body Parser . 
+request body data             backend server cannot understand .
+
+After request  middleware funcyion in express      before response 
+
+Middleware has the followimg properties .
+    1.access to req.body and res.body 
+    2.chaining ------ pass the controll to other .
+    3.send a response to stop chaining   
+
+
+
+https://expressjs.com/en/guide/using-middleware.html
+
+
+if we do not specify path in app.use ()
+it will work for all paths 

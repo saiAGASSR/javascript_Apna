@@ -1,0 +1,2 @@
+Our code  when we have syntax error we can Identify them as our editor does that work .
+normally any database error   3rd party  apps which we do not built .  error because of them .. gooogle maps on our service   , they may update policys  , they may deny the request .

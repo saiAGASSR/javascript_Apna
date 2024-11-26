@@ -1,0 +1,34 @@
+it is a litle enhancement to protect the passwords
+Every companyy has their own salt  . 
+
+
+
+
+Heavy research for this hashing 
+Research paper 
+Test 
+Etc     
+
+
+We have techniques which are already build 
+
+NodeJS tools for authentication  - signup    - password salting and hashed form . 
+
+one of them is passport .
+https://www.passportjs.org/
+
+https://www.passportjs.org/packages/
+
+https://www.npmjs.com/package/passport      
+
+
+https://mherman.org/blog/social-authentication-with-passport-dot-js/
+
+
+https://testdriven.io/
+
+https://mherman.org/blog/user-authentication-with-passport-dot-js/
+https://mherman.org/blog/user-authentication-with-passport-dot-js/
+
+Best
+https://medium.com/@prashantramnyc/node-js-with-passport-authentication-simplified-76ca65ee91e5

@@ -1,0 +1,16 @@
+npm package 
+which establish the connecton between mongo db and node server
+
+First we should init package .json
+then install mongoose 
+
+https://mongoosejs.com/docs/guide.html
+
+https://mongoosejs.com/docs/guide.html
+
+
+Mongoos 
+scheema 
+models       -    > class accepts 2 args          collection name and schema
+
+mongoose  

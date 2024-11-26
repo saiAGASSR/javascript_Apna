@@ -1,0 +1,84 @@
+How to reprsent models to interconnect them ....
+
+
+we should not make a seperate model if we dont use that model individually 
+zomato  username and address
+
+
+install express 
+install mongoose 
+mkdir Models
+cd Models
+touch user.js
+
+
+import mongoose
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+
+  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+}
+
+https://mongoosejs.com/docs/index.html
+
+import Schema from mongoose
+
+define schema 
+
+Define model
+and pass the name and schema as arguments .
+
+create async function to addusers 
+
+
+///Shell
+to connect to mongodb using shell we will use 
+mongosh
+
+
+
+////////////
+One to few 
+////////////
+
+user , address   embedding address object in user schema itself 
+
+
+////////////
+One to many 
+//////////
+creating two seperate schemas and then embeding one object id  using populate   in another schema 
+
+
+
+
+ex 
+customer schema 
+order schema 
+
+referencing order id in customer schema 
+
+
+////////////
+One to squillions  
+////////////
+
+
+here different approch compared to one to many 
+as in one to many we are embeding child reference in parent 
+but here we are embeding parent reference in child ..
+
+like an order can  be ordered by multiple customers
+but a post can be owned bu only one user or parent \
+
+
+////////////
+Documentation
+////////////
+
+https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design
+
+
+embedding i previously refere to both reference and storig full info  but actually it is just info 

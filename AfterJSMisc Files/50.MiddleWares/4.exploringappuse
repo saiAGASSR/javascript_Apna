@@ -1,0 +1,6 @@
+path specified middleware  if we provide "/"  then it will work for all routes  there after 
+if we specify special route , then middleware will work only for that 
+
+404 middleware 
+at the end of all the roots if we write specify a middleware app.use(callback)  with no specific route 
+then if the request doesnot match  above woutes then 404 will be displayed 

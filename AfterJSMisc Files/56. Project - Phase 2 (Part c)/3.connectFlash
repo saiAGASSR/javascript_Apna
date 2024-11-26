@@ -1,0 +1,19 @@
+It is a npm package . It is used to flash the messages .
+
+for example takes airbnb 
+
+if we add new listing or new review or update or delete 
+we should inform user such that  that thing is done   in pop up form . 
+
+if we refresh the page , then it will not show up    flash is used in this 
+
+https://www.npmjs.com/package/connect-flash
+
+this is user with rendering or redirects 
+
+first setup session then cookie then flash 
+
+passing two paramenters 
+key   from which we can identify . 
+
+to display flash we should use views .

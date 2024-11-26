@@ -1,0 +1,230 @@
+npm i passport 
+npm i passport-local\
+npm i passport-local-mongoose
+https://www.npmjs.com/package/passport-local-mongoose
+
+Firt we should create user /. 
+after defining mschema and model {not model its schema} , we will use plugin of passport 
+That plugin will automatically create username , password { hash and salt }   fields when defining schema .
+    
+Then in app.js 
+import
+passport 
+localStratergy 
+and user model 
+
+To implement passport in app.js 
+we need session
+after app.use session config 
+for a single session  user credentials commonly stored in session.
+a single session belongs to a particular user 
+it not not recommended to authenticate or login for every requests for that user right .
+
+app.use(passport.initialize());
+
+add this after app.use (session config );
+
+
+for every request initializing passport 
+
+
+before using passport initializing it .
+    
+app.use(session(sessionConfig));
+app.use(flash());
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+After once logged in serializeUser credentials into the session
+after logedOut  deserializeUser removes users information from the session.
+
+User.register is a static method which takles two orfuments , one is user object and another is password ,  
+
+
+Demo user 
+
+Define a get route , for this 
+create a fake user object and pass it in the User.registermethod with password as second argument . 
+save the user  in database
+
+ in response  send the result 
+ Then get in to the route.
+
+Create a signUp route and then rednder the signup form  take the datqa from signup form and then sing up post add user.register method 
+In user.register(arg1,arg2);
+pass arg 1 as user object fields  arg2 as password ;
+use flash 
+entire block in try catch block 
+
+if any error in  signup post route redirect to signup get request with a flash message in   catch block .
+
+if it is success redirect to login page with flash message .
+
+after login in form  
+in post login user passport.authenticate middleware .. and then redirect to success .
+if anny error occurs in the authentication   passport will store the error messages array  in the req.session 
+
+
+After implementing this . 
+
+we need to connect the logged in route to the create listing route . 
+if user is loggd in then allow 
+or else login in popup 
+
+before rendering addNewListing.ejs 
+write an if condition  with conditon as passport built in method . 
+req.isAuthenticated  -- it returns true if user is authenticated from the sessiion 
+then redirect to the login form with req.flash saying you need to login before creating .
+
+in req bydefault all the user information is stored in req.user
+
+After that .
+we should write a seperate middleware file to authenticate the user . 
+for creating  , edidting ,  deleting . 
+
+use that middleware function before the routes async callback function . 
+
+then after that implement logout function 
+which removes all the user information from the sessiion
+deserializeUser.
+where passport has inbuilt logout method 
+which takes a callback function as arg or param 
+that callback function will have err param or arg   which is occured when passport fails .
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Now adding the styling to teh login logout and signin 
+
+we will add them in the navbar same as the home listings etc 
+
+but to this div we will givs margin start as auto .
+
+so we should not show up all these 3 at a time right .  
+for non logged in user we should show only login or signup ,   but not logout   . 
+
+for loggin in user we should  we should show logout not login or sign in . 
+
+
+for this to achieve we need to access user information which passport stores the user information in Req.User/
+
+the req.user will be undefined if the user is not logged in . so we will show up  two buttons signUp and signIn . 
+req.user will be an defined object if the user is logged in . then we will show up logout button . 
+
+to verify this lets print  req.user in isvalidated middleware 
+
+we cannot directly access req.User object in the navbar.ejs  - but why . its req object right .
+
+we will store the req.user object in locals and access in the navbar  .. .
+
+for that define userobject in req.locals and access with the defined name over there 
+req.user:
+
+req.user is a property provided by Passport.jsto store the authenticated user's information.
+
+It exists on the req object and is available throughout the request lifecycle.
+
+However, EJS templates do not have direct access to the req object because templates are meant to generate the HTML view based on data passed to them.
+
+res.locals:
+
+res.locals is an object that contains local variables scoped to the request and response.
+
+This object is accessible within your templates, making it a convenient place to store data you want to pass to your views.
+
+When you set properties on res.locals, they are available in your EJS templates.
+
+Why Use res.locals?
+Scoping: res.locals ensures that the data is only available for the duration of the request-response cycle, providing a scoped variable accessible only within the lifecycle of the current request.
+
+Convenience: It simplifies passing data to views without directly involving the req object, adhering to the separation of concerns and maintaining a clear flow of data.
+
+Security: Helps in avoiding accidental exposure of the entire req object, which may contain sensitive information, by explicitly specifying what data is accessible in the views.
+
+By utilizing res.locals, you streamline passing the necessary data (like currUser) to your EJS templates, ensuring the information is scoped correctly and securely. This approach maintains the integrity of your application structure and keeps the templates clean and focused.
+--------------------------------------------------------------------------------------------------------------------------
+
+
+The next part - 
+When user is not logged in 
+
+when user clicks on add new listing , edit , etc   will redirect to login path .  after that bydefauly user will be redirected to listings . but we need to redirect the user to the specfied path where he is will to do action .
+For this we will use req object which contains originalUrl .
+then we will store the original Url in the res.locals and use them in the redirection part after user is authenticated.
+
+But again after user clicks on login directly the middlewate will not be invoked and results in the undefined state of originalUrl   or if it is empty we will keep that as /listings 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+We should associate owner to the listing model . - this can be userful for autharization and the listing being created , edited and deleted by who ? 
+
+Implementation -
+
+listings  owner property  not an array    - reference user - old listings no owner  
+to add the data with owner pick one user from users collection and take their object id and then use the inditdata.data and map each object in initdata.data and that returns new array assign the new array to the same initData.data ...
+
+After that we will  add a new field in the single listing page by populating th owner in the listing object ... 
+then while adding new listing we will get the user information from the req.user._id; which is created by the passport . 
+
+listing.owner = req.user._id;
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Starting with authorization
+
+Authorization for listings 
+
+everythings is completed related to login authentication , post owner 
+
+Now we need to hide edit and delete button to the users who doesnot own post 
+
+my POV - we should consider currUser object id and the clicked listings owner's object-id   if both are equal we should show or le no .
+
+myPOV for reviews - curr user's object id matched with the review's referenced listing's   --- **  i thing we ahould add owner field for review also while an owner creating an review. 
+
+Implementation 
+
+introducing two new variables. 
+
+as said before , we should have two  information 
+1- the listing is owned by Whom ?  - that exists from the single listing page - extracting the id from there . 
+2- the who is currently looged in ? -  that already exsits in the res.locals - currUser 
+
+till now we have seen the implementation if buttons hiding , but  still it can be bipass through postman and hopscoth etc  or plain javascript . 
+so we need too protect the routes of edit and delete . 
+
+The implementation . 
+first in the post. /listing/id  route : 
+while finding the listing id we are finding and updating at once   
+we ahould modify this . 
+    we will find the listing first and check wether the listing owner and the currUser id both are same or not . 
+    if not same we will flash the user with message - you are not the owner of this listing  so you can't perform the action . 
+
+we ashould add the return keyword otherwise the below lines will be executed .
+
+we should add the same condition with return for edit delete routes , so better to write as the middleware. 
+with name isOwner   with req,res,next . 
+
+Then add the validate listing as middleware as well ..
+import the necessary 
+
+----------------------
+authorization for reviews 
+------------------------
+step1 for every review we should have another field , get the review owner details  refererred to users
+step 2  to add a review the user should be logged in .
+step 3 adding reviewer names over the review whose name is static   
+for that we should populate the review author details in get single listing route 
+to populate we should pass a object with path field . 
+we should delete all reviews because the those old revies doesnot have auther object . import reviews in middleware for review deleted 
+-----------------------------------------------------------------------------------------------------------------------------------
+For any projects - ecommerce any web development , fb insta clone , music player ,
+
+basic routes ,models, schema , validations , flash messages , sessions , authentications and authorizations  -------- essentiaals
+
+

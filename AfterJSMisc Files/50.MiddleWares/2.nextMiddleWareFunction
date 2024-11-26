@@ -1,0 +1,12 @@
+The next middleware function ic commonly denoted by a variable next();
+
+
+https://sarrahpitaliya.medium.com/
+https://sarrahpitaliya.medium.com/top-5-node-js-real-time-libraries-ruling-in-2022-3f9835fa9159
+https://www.youtube.com/watch?v=0fndZG9GpVU&t=8s
+https://www.youtube.com/@Radixweb2000
+
+
+we will write next() middleware function to call the next middleware 
+
+as a good programmer we will not write any executable code after calling next() in a middleware 

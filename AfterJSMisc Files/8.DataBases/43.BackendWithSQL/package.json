@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.11.0",
+    "path": "^0.12.7",
+    "url": "^0.11.4",
+    "uuid": "^10.0.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>SL.No</th>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Details</th>
+            <th colspan="2">Action</th>
+            <th>Add Data</th>
+        </tr>
+        <% for(let i= 0; i< result.length; i++) { %> 
+            <tr>
+                <td><%= i+1 %></td>
+                <td><%= result[i].id %></td>
+                <td><%= result[i].username %></td>
+                <td><%= result[i].email %></td>
+                <td><a href="/users/<%= result[i].id %>">Get Full User Details</a></td>
+                <td>
+                    <form method="GET" action="/user/edit/<%= result[i].id %>">
+                        <button>Edit Username</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="GET" action="/user/delete/<%= result[i].id %>">
+                        <button>Delete User</button>
+                    </form>
+                </td>
+                <% if (i === 0) { %>
+                <!-- Add rowspan only for the first row -->
+                <td rowspan="<%= result.length %>">
+                    <form action="/user/addMoreUsers">
+                        <button>Add Random Users</button>
+                    </form>
+                </td>
+                <% } %>
+            </tr>
+        <% } %>
+        <tr> <td colspan="<%= result.length %>">
+                <form action="/user/addMoreUsers">
+                       <button>Add Random Users</button>
+                </form>
+            </td> 
+        </tr>
+    </table>
+
+    <a href="/addUserForm"><button>Join Us</button></a>
+    
+</body>
+</html>

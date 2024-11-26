@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="/public/style.css"> -->
+
+</head>
+<body>
+
+    <H1>All chats </H1>
+
+    <form action="/chat/new">
+        <button>  New chat  </button>
+    </form>
+
+
+    <div class="mainDiv">
+
+    <%  for(chat of chatsArray){ %> 
+            <div class="chatWrapper">
+                <p>From  <i><%=  chat.from %></i></p>
+                <p>To <i><%=  chat.to  %></i> </p>
+                <p> id is :<i><%=  chat._id  %></i> </p>
+                <div class="msgDiv">
+                    <p>message : <%=  chat.message  %></p>
+                </div>
+
+                <p><%= chat.created_on ? chat.created_on.toString().split(" ")[4] : "not exist" %></p>
+                <p><%= chat.created_on ? chat.created_on.toString().split(" ").slice(0,4).join("-") : "not exist" %></p>
+                <form action="/edit/chat/<%= chat.id %>">
+                    <button>
+                        Edit this message
+                    </button>
+                </form>
+                <form action="/delete/chat/<%= chat.id %>">
+                    <button>
+                        Delete this message
+                    </button>
+                </form>
+                <form action="/chat/<%= chat.id %>">
+                    <button>
+                        Show this message
+                    </button>
+                </form>                
+            </div>  
+    <%  }%>
+</div>
+
+    
+</body>
+</html>
+
