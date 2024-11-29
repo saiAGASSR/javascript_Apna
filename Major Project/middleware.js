@@ -10,10 +10,19 @@ let isLoggedIn = async (req,res,next) => {
  
  let loggedIn = req.isAuthenticated(); 
  if(!loggedIn) {
+    req.session.redirectUrl = req.originalUrl;
+    console.log('redirectUrl: ', req.session.redirectUrl);
     req.flash("listingError","You must be logIn to perform this action ");
     return res.redirect("/login");
  } 
  next();
+}
+// this is because the session data will be refreshed by passport after authenticating 
+let saveRedirectURL = async (req,res,next)=>{
+    if(req.session.redirectUrl){
+        res.locals.redirectUrl = req.session.redirectUrl;   
+    };
+    next();
 }
 
 let isOwner = async (req,res,next) =>{
@@ -56,4 +65,4 @@ let reviewValidation = (req,res,next) => {
 }
 
 
-export default {isLoggedIn , isOwner ,listingValidation ,reviewValidation}; 
+export default {isLoggedIn , isOwner ,listingValidation ,reviewValidation ,saveRedirectURL }; 

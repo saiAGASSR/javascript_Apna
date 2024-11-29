@@ -1,17 +1,12 @@
 import express from 'express';
-import Listing from  '../models/listings.js'
-import Review from '../models/reviews.js';
-import users from '../models/users.js';
-import customError from '../utils/customError.js';
 import wrapAsync from '../utils/wrapAsyncError.js';
-import schemaValidations from '../schema.js';
 import User from '../models/users.js';
 import passport from 'passport';
-import passportLocalMongoose from 'passport-local-mongoose'
-import isLoggedIn from '../middleware.js';
+import middlewares from '../middleware.js';
+
+const {saveRedirectURL } = middlewares;
 
 const  router = express.Router();
-const {listingSchema , reviewSchema} = schemaValidations;
 
 router.get("/signUp" ,(req,res) =>{
     let sessionUsername =  req.session.username ;
@@ -90,9 +85,10 @@ router.post("/signUp" ,wrapAsync(async (req,res) =>{
     }
 }  ));
 
-router.post("/login",passport.authenticate('local', { failureRedirect: '/login', failureMessage: true }),wrapAsync(async (req,res)=>{
+router.post("/login",saveRedirectURL,passport.authenticate('local', { failureRedirect: '/login', failureMessage: true }),wrapAsync(async (req,res)=>{
     req.flash("listingSuccess",`Welcome ${req.user.username}`);
-    res.redirect("/listings");
+    res.redirect(res.locals.redirectUrl);
+    // res.redirect("/listings");
 }))
 
 export default router;

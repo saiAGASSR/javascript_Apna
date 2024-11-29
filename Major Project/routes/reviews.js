@@ -5,6 +5,7 @@ import customError from '../utils/customError.js';
 import wrapAsync from '../utils/wrapAsyncError.js';
 
 
+
 const  router = express.Router({mergeParams: true});
 
 
@@ -34,6 +35,7 @@ router.post("/", reviewValidation ,wrapAsync(async (req,res,next)=>{
 
 
         let newReview = new Review(req.body.review);
+        let reviewOwner = currUser
         console.log('newReview: ', newReview);
         let listing = await Listing.findById(listingId);
 

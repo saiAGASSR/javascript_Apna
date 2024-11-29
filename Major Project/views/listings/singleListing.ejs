@@ -28,28 +28,29 @@
                 </div>
                 <br>
 
-              
-                <div class="btns col-6 offset-3 editDeletebtns   mb-4 " >
-                    <form  action="/listings/edit/<%= singleListing._id %>">
-            
-                        <button  class="btn editListBtn" >edit</button>
-            
-                    </form>
-            
-                    <form method="post" action="/listings/delete/<%= singleListing._id %>?_method=DELETE">
-            
-                        <button class="btn btn-dark"> Delete</button>
-            
-                    </form>
-            
-                </div>
-            
+                <%if(currUser && currUser._id.equals(singleListing.owner._id))  { %>
+                    <div class="btns col-6 offset-3 editDeletebtns   mb-4 " >
+                        <form  action="/listings/edit/<%= singleListing._id %>">
+                
+                            <button  class="btn editListBtn" >edit</button>
+                
+                        </form>
+                
+                        <form method="post" action="/listings/delete/<%= singleListing._id %>?_method=DELETE">
+                
+                            <button class="btn btn-dark"> Delete</button>
+                
+                        </form>
+                
+                    </div>
+                <% } %>
        
-
-
-
                 <hr>
+
                 <div class="col-8 offset-3 mb-3">
+                
+                <%if( currUser )  { %>
+
                 <p> <b> write a review</b></p>
 
                 <form method="post" action="/listing/<%= singleListing._id %>/reviews" class="needs-validation" novalidate >
@@ -76,27 +77,27 @@
                     <button class="btn btn-outline-dark mt-3">submit Review</button>
                 </form>
 
+                <% } %>
+
                 <hr>
                 
-                
-              
-                <div class="allReveiwsDiv row">
-                  <p><b>All reviews</b> <p>
-                
+                    <div class="allReveiwsDiv row">
+                    <p><b>All reviews</b> <p>
+                    
 
-                        <% for(review of singleListing.reviews){ %>
-                            <div class="card col-5 ms-3 mb-3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Ana</h5>                                     
-                                        <p class="card-text"><%=  review.comment  %>  </p>
-                                        <p class="card-text"> <%=  review.rating  %> &nbsp Stars</p>                                  
-                                </div>  
-                                <form method="post" action="/listing/<%= singleListing._id %>/reviews/<%= review._id %>?_method=DELETE">
-                                    <button class="btn btn-sm btn-dark mt-3 mb-3">Delete</button>
-                                </form>
-                            </div>
-                        <%} %>
-                </div>
+                            <% for(review of singleListing.reviews){ %>
+                                <div class="card col-5 ms-3 mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ana</h5>                                     
+                                            <p class="card-text"><%=  review.comment  %>  </p>
+                                            <p class="card-text"> <%=  review.rating  %> &nbsp Stars</p>                                  
+                                    </div>  
+                                    <form method="post" action="/listing/<%= singleListing._id %>/reviews/<%= review._id %>?_method=DELETE">
+                                        <button class="btn btn-sm btn-dark mt-3 mb-3">Delete</button>
+                                    </form>
+                                </div>
+                            <%} %>
+                    </div>
                     
 
                 </div>
@@ -104,9 +105,5 @@
                
             </div>
     </div>
-
-
-
-
 
 </body>
