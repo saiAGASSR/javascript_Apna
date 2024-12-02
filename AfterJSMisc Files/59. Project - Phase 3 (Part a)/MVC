@@ -1,0 +1,15 @@
+Till now we saw the implementation of core functionalities - those functionsalities which are used in every project .
+backend , frontend - core 
+- models , database , routes    , error , validations , errorhandlings 
+-------------------------------------------------------------------------------------
+Now Phase 3 
+
+we have a term called MVC - aslo called as design pattern - framework 
+
+MVC a code writing format - full stack - 3 components , model , view , controller , 
+
+Models- database designing 
+Views - frontend part 
+Controller - all the  backend functionalities .
+
+ add in the project using MVC framework implemented project using 

@@ -1,4 +1,5 @@
 import Listing from "./models/listings.js";
+import Review from "./models/reviews.js";
 import schemaValidations from './schema.js';
 import customError from "./utils/customError.js";
 
@@ -35,6 +36,16 @@ let isOwner = async (req,res,next) =>{
    next();
 };
 
+let isReviewOwner = async (req,res,next) =>{
+    let {id , reviewId} = req.params;
+    let review = await Review.findById(reviewId); 
+    if( review && !review.author._id.equals(res.locals.currUser._id) ){
+       req.flash("listingError","you are not the owner of the review ");
+       return res.redirect(`/listings/${id}`);
+    }
+    next();
+ };
+
 
 let listingValidation = (req,res,next) => {
    // let validationResult  = listingSchema.validate(req.body);
@@ -65,4 +76,4 @@ let reviewValidation = (req,res,next) => {
 }
 
 
-export default {isLoggedIn , isOwner ,listingValidation ,reviewValidation ,saveRedirectURL }; 
+export default {isLoggedIn , isOwner ,listingValidation ,reviewValidation ,saveRedirectURL ,isReviewOwner }; 

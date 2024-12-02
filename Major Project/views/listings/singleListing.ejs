@@ -43,9 +43,10 @@
                         </form>
                 
                     </div>
+                <hr>
                 <% } %>
        
-                <hr>
+               
 
                 <div class="col-8 offset-3 mb-3">
                 
@@ -76,10 +77,10 @@
                     </div>
                     <button class="btn btn-outline-dark mt-3">submit Review</button>
                 </form>
-
+                <hr>
                 <% } %>
 
-                <hr>
+                
                 
                     <div class="allReveiwsDiv row">
                     <p><b>All reviews</b> <p>
@@ -88,7 +89,7 @@
                             <% for(review of singleListing.reviews){ %>
                                 <div class="card col-5 ms-3 mb-3">
                                     <div class="card-body">
-                                        <h5 class="card-title">Ana</h5>                                     
+                                        <h5 class="card-title"><%= review.author.username %></h5>                                     
                                             <p class="card-text"><%=  review.comment  %>  </p>
                                             <p class="card-text"> <%=  review.rating  %> &nbsp Stars</p>                                  
                                     </div>  
