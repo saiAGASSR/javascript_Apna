@@ -1,0 +1,4 @@
+we cannot send the image to the backend because bydefault the form sends url encoded data to the backend 
+
+when we want to send files through html forms we should change the encoding type of the form . 
+type = multipart/encodingData 
