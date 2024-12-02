@@ -10,14 +10,14 @@ const {saveRedirectURL } = middlewares;
 
 const  router = express.Router();
 
-router.get("/signUp" , wrapAsync(getSignUp))
+router.route("/signUp")
+    .get( wrapAsync(getSignUp))
+    .post(wrapAsync(postSignUp));
 
-router.get("/login" ,  wrapAsync(getLogin) )
+router.route("/login")
+    .get(wrapAsync(getLogin))
+    .post(saveRedirectURL,passport.authenticate('local', { failureRedirect: '/login', failureMessage: true }), wrapAsync(postLogin))
 
 router.get("/logout", wrapAsync(getLogOut))
-
-router.post("/signUp" ,wrapAsync(postSignUp));
-
-router.post("/login",saveRedirectURL,passport.authenticate('local', { failureRedirect: '/login', failureMessage: true }),wrapAsync(postLogin))
 
 export default router;

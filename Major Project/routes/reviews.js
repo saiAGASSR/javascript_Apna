@@ -14,4 +14,4 @@ router.post("/", isLoggedIn , reviewValidation ,wrapAsync(newReview) )
 
 router.delete("/:reviewId",isReviewOwner,wrapAsync(destroyReview) )
 
-export default router;c
+export default router;
