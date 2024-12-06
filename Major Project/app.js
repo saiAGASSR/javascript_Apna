@@ -1,3 +1,14 @@
+import dotenv from 'dotenv';
+ 
+if(process.env.NODE_ENV === "development"){
+    dotenv.config();
+}
+if(process.env.NODE_ENV != "production"){
+    dotenv.config();
+}
+console.log(process.env.API_KEY);
+
+
 import express from 'express';
 import mongoose from 'mongoose';
 import path   from "path";

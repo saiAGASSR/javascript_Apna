@@ -13,8 +13,8 @@ const  router = express.Router();
 
 router.route("/")
     .get(wrapAsync(allListings))
-    .post(isLoggedIn, isOwner, (req,res)=>{
-        res.semd(req.file)
+    .post(isLoggedIn, isOwner, upload.single("image"),  (req,res)=>{
+        res.send(req.file)
     } , listingValidation ,wrapAsync(postaddnewListing))
 
 

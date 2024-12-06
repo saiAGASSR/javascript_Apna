@@ -6,7 +6,7 @@
         <h1>Add your Listing </h1>
 
 
-        <form method="post" action="/listings" novalidate class="needs-validation">
+        <form method="post" action="/listings" novalidate class="needs-validation"  enctype="multipart/form-data">
 
 
 
@@ -35,12 +35,11 @@
             <div class="mb-3">
                 <label for="image"  class="form-label">Enter your image url </label>
                 <input class="form-control"  type="text" name="image" placeholder="enter image url / link " >
-                <!-- <div class="valid-feedback">
-                    looks good              
-                </div>
-                <div class="invalid-feedback">
-                    Please enter the image url 
-                </div> -->
+            </div>
+
+            <div class="mb-3">
+                <label for="image"  class="form-label">Upload your image url </label>
+                <input class="form-control"  type="file" name="image">
             </div>
 
             <div class="row">
