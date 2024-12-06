@@ -2,3 +2,7 @@ we cannot send the image to the backend because bydefault the form sends url enc
 
 when we want to send files through html forms we should change the encoding type of the form . 
 type = multipart/encodingData 
+
+
+
+https://www.npmjs.com/package/multer
