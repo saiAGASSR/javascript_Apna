@@ -3,6 +3,60 @@ we cannot send the image to the backend because bydefault the form sends url enc
 when we want to send files through html forms we should change the encoding type of the form . 
 type = multipart/encodingData 
 
+multer npm package for multiform data 
+it creates uploads folder , and in the post middleware we should specify the file field name ,
 
 
-https://www.npmjs.com/package/multer
+cloud setup -----------
+for example cloudinary 
+product environment credentials 
+
+sensitive information is not directly written in code , not uploading into the gitHub 
+
+.env file 
+
+to save all these credentials , 
+
+format is fixed , that i skey value pair 
+KEY = value 
+no space ,quotes between key value pair 
+simply Key=Value .
+
+once we save the environmental variable in .env   we can use that in our project anywhere . 
+
+
+we cannot access this directly from .env 
+to access this , third party library 
+
+https://www.npmjs.com/package/dotenv
+
+As early as possible in your application, import and configure dotenv:
+
+import 'dotenv/config'
+// console.log(process.env);
+// console.log(process.env.KEY);
+
+import dotenv from 'dotenv';
+ 
+if(process.env.NODE_ENV === "development"){
+    dotenv.config();
+}
+if(process.env.NODE_ENV != "production"){
+    dotenv.config();
+}
+console.log(process.env.API_KEY);
+
+
+SINCE WE ARE IN DEVELOPMENT PHASE 
+
+we will be using env file only in development phase not in production phase .
+
+while deployment we will set the NODE_ENV value to production . 
+
+
+https://www.npmjs.com/package/multer-storage-cloudinary
+https://www.npmjs.com/package/cloudinary
+
+to use this library , we should make an individual file with cloud config name ,
+
+before uploading a file {image in this case } accessing account is must .

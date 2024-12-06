@@ -3,7 +3,7 @@ import wrapAsync from '../utils/wrapAsyncError.js';
 import middlewares from '../middleware.js';
 import listingController from "../controller/listings.js";
 import multer from 'multer';
-const upload = multer({ dest: 'uploads/' })
+const upload = multer({dest : 'uploads/'})
 
 const {listingValidation , isLoggedIn, isOwner } = middlewares;
 const {allListings , getSingleListing , getNewListting, postaddnewListing , getEditListing , putEditNewListing , destroyListing , destroyAllListing} = listingController;
