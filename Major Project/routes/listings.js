@@ -3,7 +3,8 @@ import wrapAsync from '../utils/wrapAsyncError.js';
 import middlewares from '../middleware.js';
 import listingController from "../controller/listings.js";
 import multer from 'multer';
-const upload = multer({dest : 'uploads/'})
+import {storage} from '../cloudinaryConfig.js'
+const upload = multer({storage})
 
 const {listingValidation , isLoggedIn, isOwner } = middlewares;
 const {allListings , getSingleListing , getNewListting, postaddnewListing , getEditListing , putEditNewListing , destroyListing , destroyAllListing} = listingController;
@@ -13,9 +14,9 @@ const  router = express.Router();
 
 router.route("/")
     .get(wrapAsync(allListings))
-    .post(isLoggedIn, isOwner, upload.single("image"),  (req,res)=>{
+    .post(isLoggedIn, isOwner, upload.single('image'), (req,res) =>{
         res.send(req.file)
-    } , listingValidation ,wrapAsync(postaddnewListing))
+    } ,listingValidation ,wrapAsync(postaddnewListing) )
 
 
 router.get("/new",isLoggedIn, wrapAsync(getNewListting));
