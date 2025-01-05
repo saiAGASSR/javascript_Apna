@@ -9,3 +9,7 @@ can i have any reference if possible
 So i just want to  modify views section which contains ejs templates to react components . that is the thing ?
 
 and  also i want to make  ultra modern animations while scrolling down and animations  while opening a listing or anything , how to implement such types ??
+
+Web Dev Ta 8 — Yesterday at 4:12 PM
+like possible solution where discussed there
+
