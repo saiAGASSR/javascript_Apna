@@ -3,7 +3,8 @@ import wrapAsync from '../utils/wrapAsyncError.js';
 import middlewares from '../middleware.js';
 import listingController from "../controller/listings.js";
 import multer from 'multer';
-import {storage} from '../cloudinaryConfig.js'
+import { storage } from '../cloudinaryConfig.js';
+
 const upload = multer({storage})
 
 const {listingValidation , isLoggedIn, isOwner } = middlewares;

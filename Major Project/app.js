@@ -1,12 +1,15 @@
-import dotenv from 'dotenv';
- 
-if(process.env.NODE_ENV === "development"){
-    dotenv.config();
+import 'dotenv/config';
+
+if (process.env.NODE_ENV === "development") {
+    console.log("Development mode: environment variables loaded");
 }
-if(process.env.NODE_ENV != "production"){
-    dotenv.config();
+
+if (process.env.NODE_ENV === "production") {
+    console.log("production mode: environment variables loaded");
 }
-console.log(process.env.API_KEY);
+
+console.log(process.env.CLOUD_API_KEY);
+
 
 
 import express from 'express';
