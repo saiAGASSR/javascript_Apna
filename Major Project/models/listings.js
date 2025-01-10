@@ -10,13 +10,8 @@ const listingSchema = new Schema({
     } ,
     description  : String ,
     image        : {
-        type     : String,
-        default  : "https://media.istockphoto.com/id/598786462/photo/sy-cbd-from-domain-day.jpg?s=1024x1024&w=is&k=20&c=xGdgTy8_vctwwUW_831EJstmq0x7qJaDVIIrYIM64vg=",
-        set      : (v) =>  v === "" 
-                            ? 
-                            "https://media.istockphoto.com/id/598786462/photo/sy-cbd-from-domain-day.jpg?s=1024x1024&w=is&k=20&c=xGdgTy8_vctwwUW_831EJstmq0x7qJaDVIIrYIM64vg="
-                            :
-                            v
+        url : String,
+        fileName : String
                             
     } ,
     location     : {

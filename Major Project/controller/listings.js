@@ -30,6 +30,7 @@ let getSingleListing = async (req,res)=>{
     }
 
 let postaddnewListing = async (req, res, next) => {
+    let imageObj = req.file;
     console.log("new post request ");
     console.log(req.body);
     // Create a new listing object
@@ -37,7 +38,10 @@ let postaddnewListing = async (req, res, next) => {
         title: req.body.title,
         description: req.body.description,
         price: req.body.price,
-        image: req.body.image,
+        image: {
+            url : imageObj.path,
+            fileName : imageObj.filaname
+        },
         country: req.body.country,
         location: req.body.location
     });
