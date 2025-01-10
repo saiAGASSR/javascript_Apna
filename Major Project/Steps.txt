@@ -1,0 +1,45 @@
+60. Project - Phase 3 (Part b)
+again change the form type to 
+formtype encrypt - multiform formdata 
+
+
+we should remove required tag from the form  for the image field 
+
+in addnew list form we shoul dadd required field ..
+
+
+In backend 
+we should make changes to handle the new change 
+
+as did in the new listing post middleware 
+make change in the put middleware adding upload.single ("listing[image])
+
+same changes in the controller section with extracting the  url and filepath from the req.file object . 
+but in the updation wea re updating with  find and update query . 
+in this query they are passing the req.body object . which doesnot contain the file object which is present in req.file 
+if user doesnot provide image 
+we should check the req.file object is defined or not . 
+In JS to check wether the file is defined or not 
+if(   typeOf  req.file  !== "undefined" )
+
+
+
+
+preview section in edit page .. 
+
+to develope a preview section in the edit form so that user will have an idea to change the image or not 
+
+creating a small div and displaying there .
+
+problem  high quality        that wuality is not required we should have general idea preview pixels 
+
+tranformation of images  
+cloudinary     pathparams after uploads/ e_blur 
+
+before rendering the edit form   access the image url and using replacing methor 
+replace("/upload,"/desided")
+
+
+
+
+add this in resume ... tranformation qptimization 
