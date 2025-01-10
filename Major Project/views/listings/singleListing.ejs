@@ -10,7 +10,7 @@
             <div class="card col-6 offset-3 mt-3 showListing listing-card">
 
 
-                <img src=" <%= singleListing.image  %>" class="card-img-top img-in-single-list" alt="your image">
+                <img src=" <%= singleListing.image.url %>" class="card-img-top img-in-single-list" alt="your image">
                 <div class="card-body">
                     <p class="card-text mt-3" > created by <i><%= singleListing.owner.username  %>  </i>  </p>
                     <p class="card-text mt-3" > <%= singleListing.description  %>   </p>

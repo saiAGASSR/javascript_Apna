@@ -15,9 +15,7 @@ const  router = express.Router();
 
 router.route("/")
     .get(wrapAsync(allListings))
-    .post(isLoggedIn, isOwner, upload.single('image'), (req,res) =>{
-        res.send(req.file)
-    } ,listingValidation ,wrapAsync(postaddnewListing) )
+    .post( isLoggedIn, isOwner, upload.single('image'),listingValidation ,wrapAsync(postaddnewListing) )
 
 
 router.get("/new",isLoggedIn, wrapAsync(getNewListting));
