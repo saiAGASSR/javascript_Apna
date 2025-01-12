@@ -40,7 +40,7 @@ let postaddnewListing = async (req, res, next) => {
         price: req.body.price,
         image: {
             url : imageObj.path,
-            fileName : imageObj.filaname
+            fileName : imageObj.filename
         },
         country: req.body.country,
         location: req.body.location
@@ -67,11 +67,22 @@ let getEditListing = async(req,res)=>{
 
 let putEditNewListing = async(req,res)=>{
     let id = req.params.id;
+    let imageObj = req.file;
+    
     if(!req.body.listing){
         throw new customError(400,"please provide information")
     } 
     let updateJSONBody = req.body.listing;
+    
     let editListing = await Listing.findByIdAndUpdate(id,{...updateJSONBody})
+
+    if( typeof imageObj !== "undefined" ){
+        updateJSONBody.image = {
+            url : imageObj.path,
+            fileName : imageObj.filename
+        }
+    await    editListing.save()
+    }
     
     console.log('id in put is ',id);
     console.log('body in put is ',updateJSONBody);
