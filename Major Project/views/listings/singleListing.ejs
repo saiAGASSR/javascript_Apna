@@ -95,9 +95,11 @@
                 <% } %>
 
                 
-                
+                <% if ( singleListing.reviews.lenth > 0  ) { %>
+
+               
                     <div class="allReveiwsDiv row">
-                    <p><b>All reviews</b> <p>
+                        <p><b>All reviews</b> <p>
                     
 
                             <% for(review of singleListing.reviews){ %>
@@ -116,12 +118,17 @@
                                 </div>
                             <%} %>
                     </div>
-                    
+                <% } %>
+                </div>
+ 
 
                 </div>
-
-               
-            </div>
+                <div class="col-8 offset-3 mb-3">
+                    <h3> Where you will be  </h3>
+                    <div class="map">
+                        
+                    </div>
+                </div>
     </div>
 
 </body>

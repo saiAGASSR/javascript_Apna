@@ -43,3 +43,36 @@ replace("/upload,"/desided")
 
 
 add this in resume ... tranformation qptimization 
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The Map -Getting Started with Maps
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+This will be relating to the location of the listing related to the single listing . 
+
+we have so many options for maps API . 
+
+here we will use google maps api  - 
+other functionalities we can explore . 
+we are not using it because google maps asks credit card .
+
+MAPBOX
+
+we will be using the public key that will be kept in the env file . we should not be keeping that in the public folder . 
+
+This access token will be used for authentication by Map box .
+Map box will accept only requests which contain the access  token
+
+
+https://docs.mapbox.com/mapbox-gl-js/example/simple-map/
+
+
+map box -  co ordinates first lattitude and then longitude .
+
+generally first longitude and then lattitude
+
+
+script file will be written in seperate public folder and there we cannot access the environmental variables of .env file 
