@@ -78,8 +78,16 @@ let postSignUp = async (req,res) =>{
 
 let postLogin  = async (req,res)=>{
     req.flash("listingSuccess",`Welcome ${req.user.username}`);
-    res.redirect(res.locals.redirectUrl);
-    // res.redirect("/listings");
+    console.log("res local : " , res.locals );
+    console.log("res local : " , res.locals.redirectUrl );
+    
+    if(typeof res.locals.redirectUrl !== "undefined"){
+        res.redirect(res.locals.redirectUrl);
+    }
+    else{
+    res.redirect("/listings");
+
+    }
 };
 
 export default  {getSignUp ,  getLogin  , getLogOut , postSignUp , postLogin };

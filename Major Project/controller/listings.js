@@ -61,7 +61,14 @@ let getEditListing = async(req,res)=>{
         req.flash("listingError","The listing you are searching is deleted or does not exists");
         res.redirect("/listings");
     }
-    res.render("./listings/editListForm",{editListing})
+    let replacedImageUrl = editListing.image.url ;
+    console.log(replacedImageUrl)
+    console.log(replacedImageUrl);
+    replacedImageUrl = replacedImageUrl.replace("/upload","/upload/ar_1.0,c_fill,h_250/bo_5px_solid_black");
+    console.log(replacedImageUrl);
+    // https://res.cloudinary.com/demo/image/upload/ar_1.0,c_fill,h_250/bo_5px_solid_lightblue/leather_bag_gray.jpg
+                    
+    res.render("./listings/editListForm",{editListing , replacedImageUrl})
     
     };
 
@@ -77,7 +84,7 @@ let putEditNewListing = async(req,res)=>{
     let editListing = await Listing.findByIdAndUpdate(id,{...updateJSONBody})
 
     if( typeof imageObj !== "undefined" ){
-        updateJSONBody.image = {
+        editListing.image = {
             url : imageObj.path,
             fileName : imageObj.filename
         }

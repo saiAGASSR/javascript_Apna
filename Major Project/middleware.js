@@ -39,7 +39,11 @@ let isOwner = async (req,res,next) =>{
 let isReviewOwner = async (req,res,next) =>{
     let {id , reviewId} = req.params;
     let review = await Review.findById(reviewId); 
-    if( review && !review.author._id.equals(res.locals.currUser._id) ){
+    console.log(review);
+    console.log(review.author._id);
+    console.log(res.locals.currUser);
+    
+    if( review && !review.author._id.equals(res.locals.currUser._id  || typeof (res.locals.currUser) === "undefined" || typeof (review.author._id) === "undefined") ){
        req.flash("listingError","you are not the owner of the review ");
        return res.redirect(`/listings/${id}`);
     }

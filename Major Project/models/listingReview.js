@@ -47,7 +47,7 @@ const addListingWithReviews = async () => {
             rating: 5
         });
 
-        let listing_id = "6749c13813caac15f64fd044";
+        let listing_id = "6783678ddeb46ce95221f9f1";
 
         await review1.save();
         await review2.save();

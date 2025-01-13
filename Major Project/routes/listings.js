@@ -24,7 +24,7 @@ router.get("/:id", wrapAsync(getSingleListing));
 
 router.route("/edit/:id")
     .get( isLoggedIn  ,isOwner , wrapAsync(getEditListing))
-    .put(isLoggedIn,isOwner,wrapAsync(putEditNewListing));
+    .put(isLoggedIn,isOwner, upload.single('listing[image]'),wrapAsync(putEditNewListing));
 
 router.delete("/delete/:id", isLoggedIn , isOwner ,wrapAsync(destroyListing));
 
