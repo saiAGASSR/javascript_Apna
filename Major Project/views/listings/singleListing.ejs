@@ -1,5 +1,10 @@
 <% layout('/layouts/boilerplate.ejs') -%> 
+
 <body>
+
+<script > 
+    let localAccesstoken = '<%= process.env.mapBox_access_token %>'
+</script>
 
     <div class="row mt-3">
         <div class="col-8 offset-3">
@@ -131,4 +136,6 @@
                 </div>
     </div>
 
+<script src="../../public/js/map.js"> </script>
+<!-- <script src="js/map.js"> </script> -->
 </body>

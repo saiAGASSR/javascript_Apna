@@ -76,3 +76,7 @@ generally first longitude and then lattitude
 
 
 script file will be written in seperate public folder and there we cannot access the environmental variables of .env file 
+
+so we need to access the environmental variable in the singlelisting and then access the variable directly in the map.js
+
+we have created map.js for script but <script tag is not necessary 
