@@ -2,13 +2,23 @@ import Listing from  '../models/listings.js'
 import customError from '../utils/customError.js';
 
 
+// mapBox
+// const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+// import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding';
+// import  pkg  from "@mapbox/mapbox-sdk/services/geocoding.js";
+// const  =  "@mapbox/mapbox-sdk/services/geocoding";
+import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding.js';
+
+const mbxGeoCodingClient = mbxGeocoding({ accessToken: process.env.mapBox_access_token });
+
+// const mbxGeoCodingClient = mbxGeocoding({ accessToken: process.env.mapBox_access_token });
+
 let allListings = async (req,res,next)=>{
 
     let allListings = await Listing.find({})
     console.log("req reciedved");
     
     res.render("./listings/allListings",{allListings})
-
 }
 
 let  getNewListting = async(req,res)=>{
@@ -30,6 +40,21 @@ let getSingleListing = async (req,res)=>{
     }
 
 let postaddnewListing = async (req, res, next) => {
+
+    let responce =  await mbxGeoCodingClient.forwardGeocode({
+        // query: 'Paris, France',
+        query: req.body.location,
+        limit: 1
+      })
+        .send()
+        console.log(`the location is : ${req.body.location}`);
+        
+
+        // response.body.features   
+    console.log(responce.body.features[0].geometry.coordinates);
+    
+    res.send("it is working");
+    // console.log(req.body);
     let imageObj = req.file;
     console.log("new post request ");
     console.log(req.body);

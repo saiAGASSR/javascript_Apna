@@ -13,3 +13,6 @@ and  also i want to make  ultra modern animations while scrolling down and anima
 Web Dev Ta 8 — Yesterday at 4:12 PM
 like possible solution where discussed there
 
+
+map is not getting displaying , because of map,js script ?
+https://github.com/saiAGASSR/javascript_Apna.git

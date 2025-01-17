@@ -80,3 +80,83 @@ script file will be written in seperate public folder and there we cannot access
 so we need to access the environmental variable in the singlelisting and then access the variable directly in the map.js
 
 we have created map.js for script but <script tag is not necessary 
+
+I go an erro rbecause of the rendering of the map.js 
+in boiler plate we have body of the single listing 
+in single listing i should add the script inside the body tag becasue outsine the body tags will be excludede in the layOut .
+
+
+till Now we stored the cordinates as the  constant , we need to vary the coordinates as per the listings location .
+
+Geocoding is the process of converting the address in to the    geographic cordinates . 
+which you can use to place markers or position  on the map . 
+
+there can be many geocoding apis available 
+
+when we are entering the address in the   aamzon or any website if they implement forward geocoding and backward geocoding .  
+
+the address we are entering - convert into frward geocoding and they will be searcing the nearby cordinates and those coordinates will be backward geocoding and then will be appearing in the suggestions . 
+
+https://docs.mapbox.com/api/search/geocoding/
+
+
+import 
+https://github.com/mapbox/mapbox-sdk-js
+
+forward and backward geocoding .
+https://github.com/mapbox/mapbox-sdk-js/blob/main/docs/services.md
+
+
+in controller section we are converting the address to  cordinates through geocoding . 
+
+we are requirinbg th enpmmapbx client 
+https://www.npmjs.com/package/@mapbox/mapbox-sdk
+
+we are requiring the geoservices . 
+
+in the create postaddnewListing controller service function 
+when this is invoked with the client request . 
+https://github.com/mapbox/mapbox-sdk-js/blob/main/docs/services.md#forwardgeocode
+geocodingClient.forwardGeocode({
+  query: 'Paris, France',
+  limit: 2
+})
+  .send()
+  .then(response => {
+    const match = response.body;
+  });
+
+
+  since the function is async function with async keyword we are removing .then   
+
+the configs in the forward limit is bydefault set to 5 . 
+for suppose if user enters india there are many coordinates in the response , to limit them , we have set the limit to 5 byDefault .
+
+response.body.features
+
+features is the array   of the objects .
+the number of objects in the array depends on the number of the value given to the limit .
+to access the array with limit 1 [0]
+
+
+
+we can store the cordinates in the db with listing model by creating another field called cordinates field name .
+but we have a better option called geoJSON 
+
+
+
+GeoJSON
+https://www.mongodb.com/docs/manual/reference/geojson/
+
+https://mongoosejs.com/docs/geojson.html
+
+The data we are receiving from the mapBox is in geoJSON format 
+
+lattitude and longitude general order 
+but in mapBox its reverse 
+Why geoJSON
+
+mongodb database  inbuilt functionalities 
+
+for example when we are in hyderabad and opening airbnb websiyte for near our surroundings we need to do some operations on the db to find the nearing listings . - db has some inbuilt functions .
+
