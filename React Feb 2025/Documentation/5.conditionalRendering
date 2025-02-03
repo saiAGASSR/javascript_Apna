@@ -1,0 +1,64 @@
+login in and non logged in 
+
+let content;
+
+if(loggedIn){
+    content = <Dashboard  />
+}else 
+{
+    content =<LoginForm />
+}
+
+return(
+    <div>
+          {content}
+    </div>
+    
+)
+
+<div>
+{
+    loggedIn ?
+        ( <Dashboard  /> )
+            : 
+        (<LoginForm />)
+
+} 
+</div>
+
+<div>  {  loggedIn && <Dashboard /> } </div>
+
+
+mycode
+const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 },
+]; 
+
+function  arrayLi() {
+
+ return (
+    <>
+
+    products.foreach((el)=>{
+        <li>   { el }  <li/> 
+     })
+
+    </>
+ )   
+
+}
+
+
+https://docs.vultr.com/javascript/standard-library/Array/forEach?ref=9141994&utm_source=performance-max-apac&utm_medium=paidmedia&obility_id=16876059738&&utm_campaign=APAC_-_India_-_Performance_Max_-_1001&utm_term=&utm_content=&ref=9141994&gad_source=1&gclid=CjwKCAiA74G9BhAEEiwA8kNfpQKQSX65X2fLYPT3_jDK55FRN82S5arFEPAs6vWUDQPXbBn2fb8fpRoC4cgQAvD_BwE
+
+
+Use Promise.all with map() for asynchronous operations instead.
+
+const urls = ['url1', 'url2', 'url3'];
+const fetchPromises = urls.map(url => fetch(url));
+
+Promise.all(fetchPromises)
+    .then(responses => responses.forEach(response => console.log(response.status)))
+    .catch(error => console.error('Failed to fetch:', error));

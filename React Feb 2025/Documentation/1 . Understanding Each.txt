@@ -1,0 +1,45 @@
+https://react.dev/learn
+
+
+Components - UI material - small as button and large as a entire . page  .. 
+
+react components are javascript functions that return markUp . 
+
+function myButton(){
+
+    return   (
+
+            <div> <button>  I am a button  </button>  </div>
+    )
+
+
+}
+
+function nestButton() {
+    return ( 
+        <div> myButton() </div>
+    )
+}
+
+
+function MyButton() {
+  return (
+    <button>
+      I'm a button
+    </button>
+  );
+}
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Welcome to my app</h1>
+      <MyButton />
+    </div>
+  );
+}
+
+
+<ReactComponents/>
+
+starts with capital letter and all html  tags start with small letter 
