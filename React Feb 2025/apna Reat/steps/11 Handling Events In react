@@ -1,0 +1,48 @@
+In normal  javascript we will  handle the events  by accessing the  elemts and DOM 
+document.wueryselector 
+
+for ex 
+there is a button 
+with class name as  submit 
+
+
+let button = document.getelementbyclassName("sumbit")
+
+adding the eventlistenes and call back function 
+button.addeventlistener("onClick",()=>{
+
+})
+
+1--------------------
+---------Handling Click Events ---------------
+    here it can be done wiith normalfunctios
+    defining onClick on the buttoon its;lelf
+
+
+
+    Handling non click 
+
+    doub;leclick 
+    hover 
+    mouse down 
+    mpuise hover
+
+
+    In react 
+    on{eventName}
+
+
+    By default an event argument will be  passed as an argument for eventhandling  function calling 
+    event have many  properties , 
+    methoods
+    prevent default *** will be used 
+
+    Nower sill briefly introduce forms 
+    we willcover forms in later section as it is very cmplex in react 
+
+    simpleform  simpleform 
+
+
+
+    onSubmit should be assigned with form 
+    

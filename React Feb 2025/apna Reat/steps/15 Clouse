@@ -1,0 +1,16 @@
+A FUNCTION VARIABLES SCOPE IS LOCAL . 
+THEY WILL INITIALIZE  WHEN WE CALL THE  function 
+and  deInitialize from the memory   if the execution of the function  is Development
+
+inner function preserves the variables of the outer function 
+
+This is called clouser property In js
+
+function outer(){
+    let b=10;
+
+        function inner(){
+            let a =10;
+            console.log(a+b)
+        }
+}

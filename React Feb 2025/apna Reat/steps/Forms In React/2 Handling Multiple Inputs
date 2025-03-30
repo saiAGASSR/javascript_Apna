@@ -1,0 +1,8 @@
+Handling multiple form data 
+setting  that many state variables is not good practice .
+so if we will make an object of fieldnames and then make one handler function to updtate specific event using field nale 
+with name propof element 
+
+
+object[fieldName]
+computed property name 

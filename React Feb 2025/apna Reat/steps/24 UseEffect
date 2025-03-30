@@ -1,0 +1,17 @@
+It is used to do action when the component is first time rendered ..
+
+
+Effect in reacts on components rendering 
+Data Fetching 
+setting upa subscription
+manually changing the DOM in react 
+
+useEffect is a function 
+useEffect{syntax}
+setUp and dependenciesc  = stateVariables
+
+empty states 
+Use Cases
+
+https://react.dev/reference/react/useEffect
+

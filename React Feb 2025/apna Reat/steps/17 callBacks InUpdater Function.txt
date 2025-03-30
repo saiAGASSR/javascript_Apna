@@ -1,0 +1,40 @@
+
+
+
+        setCount(count + 1);
+        setCount(count + 1);
+        setCount(count + 1);
+        setCount(count + 1);
+        setCount(count + 1);
+
+
+setCount is an asynchronous method . 
+
+so the next method executes only when the first async function's execution completed 
+
+we have callBacks over there
+
+The above function calls wont work 
+        setCount(count + 1);
+        setCount(count + 1);
+
+        Like This 
+
+Updater function comes with twologics 
+I mean two cases . 
+        1.New value depends onoldvalue 
+                setCount((prev=>{
+                        return prev + 1 ;
+                }))
+
+        This works  in caseof callBack Functions .
+                setCount((prev=>{
+
+                        return prev+1;
+                }))
+                setCount((prev=>{
+
+                        return prev+1;
+                }))        
+
+

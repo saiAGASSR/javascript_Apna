@@ -1,0 +1,52 @@
+1--------------------------------------------------
+My Therory 
+using clouser property 
+
+    useState(initialValue)
+
+    function state(value){
+
+        let a =initialValue
+
+
+
+    }
+
+When we call setState    totalfunction componennt willbe re rendered .
+other than     const [isLiked , setIsLiked] = useState(false) 
+
+-----------------------------------------------------------------------------------------------
+"use client";
+import { useState } from "react";
+
+
+
+const Counter = ()=>{
+    const [count,setCount] = useState(0);
+    console.log("Component is rendered");
+    console.log(`Count is ${count}`);
+    
+    
+    const handleClick=()=>{
+        setCount(count + 1);
+        console.log(`Inside HandleClick is ${count}`);
+
+    }
+    return (
+        <>
+        <div>
+            <button onClick={handleClick}>Counter {count}</button>
+        </div>
+        </>
+    )
+}
+
+export default Counter;
+
+-----------------------------------------------------------------------------------------------
+
+Here the count  for         console.log(`Inside HandleClick is ${count}`);  is  count value is logging before rerendering of the component . 
+
+
+
+-----------------------------------------------------------------------------------------------

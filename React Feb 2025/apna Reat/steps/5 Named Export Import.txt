@@ -1,0 +1,10 @@
+export and then import . 
+
+
+
+
+1 default export   when exportingf singfle component  or singleanythong     importing with diff title allows .
+    
+named export    when exporting multiplethings .
+
+In react All tags should be closed tags .

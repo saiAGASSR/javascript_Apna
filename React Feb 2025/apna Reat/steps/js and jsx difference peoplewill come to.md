@@ -1,0 +1,1 @@
+js and jsx difference   peoplewill come to know about react components are used with  jsx

@@ -1,0 +1,21 @@
+FORMS IN REACT MAINTAIN INTERNAL STATE 
+
+Generally input elements like textarea  have their own state 
+React component s a variable   information changes with setState 
+
+
+Flow - 
+    form element  onChange handler 
+        event.target.value 
+        setState 
+
+
+Labels in react 
+    labels 
+
+    attribute user for connecting in HTML is id and for 
+    but in js  jsx for is reserved keyword 
+
+    so htmlfor 
+
+    internal html - for

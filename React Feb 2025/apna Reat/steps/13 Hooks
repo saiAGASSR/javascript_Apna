@@ -1,0 +1,6 @@
+Hooks are new addition in react 17.8 
+
+Use state returns an array which contains twoelements .
+
+useState(initialstate)  returns an array of exactly two elements .
+const [initialstateName,setInitialstateName] =  useState(initialstate)

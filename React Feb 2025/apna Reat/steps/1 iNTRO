@@ -1,0 +1,18 @@
+React is a JS library .
+
+React lets you build UI from individual peices , called components .
+A component can be of single piece of buttona  , heart icon , video , 
+Thumbnail . 
+
+
+React components is resusable      liek functions . 
+function execution  
+components rendering .
+
+
+We will invoke functions 
+we wil render react comppnentns 
+
+
+
+Thumbnail Component , Video Component . 

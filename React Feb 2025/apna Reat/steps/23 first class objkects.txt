@@ -1,0 +1,9 @@
+js functions are first class object smart
+
+let functionName = ()=>{
+
+    
+
+}
+
+assigning variable to a function possible in js 

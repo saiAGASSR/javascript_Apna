@@ -1,0 +1,42 @@
+Your code has a few issues:
+
+Incorrect function parameters – React component props should be passed as an object.
+Incorrect onClick attribute – It should be onClick (camelCase), not onclick.
+Incorrect closing of JSX fragment (<> and </> mismatch) – The fragment syntax is incorrect.
+Misspelled handleClick – You wrote hancleClick instead of handleClick.
+
+
+
+
+
+export default function MyButton({ count, handleClick }) { 
+  return (
+    <div>
+      <button onClick={handleClick}>Click Me {count}</button>
+    </div>
+  );
+}
+
+
+import MyButton from "./button.js";
+import { useState } from "react";
+
+export default function App() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(prevCount => prevCount + 1); // Correctly updates count
+  }
+
+  return (
+    <>
+      <h1>Hello world</h1>
+      <MyButton count={count} handleClick={handleClick} />
+      <MyButton count={count} handleClick={handleClick} />
+    </>
+  );
+}
+Yes, you're right! prevCount is not explicitly declared, but it's a parameter in the arrow function inside setCount.
+
+Why Does prevCount Work?
+React provides the previous state value when using the functional form of setState

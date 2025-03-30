@@ -1,0 +1,22 @@
+TillNow we have kept states from boolean , number , we can assign string 
+
+Now Objects 
+
+Ludo game 
+has 4 players will be chosing the game 
+movies will be calculated . 
+
+Here the thing is we will be having four buttons and count for eacjh color 
+
+moves object should be used instead of using 4 states for each color counts . 
+
+so when we change the property of the object the object will not be changed   . I mean its address is the same 
+so  useState will not detect the change and no re rendering o fthe componet willoccur .
+
+this case can be solved using  spread operator .
+
+this will return new array and thus  object change will be detected .
+we should use call back functions with prev state    as discussed last module . 
+
+
+same goes with arrays .

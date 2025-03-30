@@ -1,0 +1,40 @@
+It looks like you haven’t installed FontAwesome properly in your Next.js project. Try these steps to fix the issue:
+
+1. Install FontAwesome Packages
+Run the following command in your terminal:
+
+2. Check Your Import Statements
+After installation, ensure your LikeButton.jsx is correctly importing the icon:
+
+jsx
+Copy
+Edit
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
+const LikeButton = () => {
+    return (
+        <div>
+            <FontAwesomeIcon icon={faHeart} />
+        </div>
+    );
+}
+
+export default LikeButton;
+3. Restart Your Development Server
+Sometimes, Next.js needs a restart to recognize newly installed dependencies. Stop your dev server (Ctrl + C) and restart it:
+
+sh
+Copy
+Edit
+npm run dev
+
+
+
+
+NOw we have solid icin and outline icon 
+we need to toggle between those as same like taxt toggle feature in the airbnb website .
+
+initial state like

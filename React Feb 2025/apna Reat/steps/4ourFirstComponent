@@ -1,0 +1,15 @@
+reusable and independent pieceo of code . 
+
+App is the superior  or it is at top level .
+Component is like   function .returns root element 
+<>
+</>
+
+
+Rendering 
+ Like HTML TAG <Title></Title>  <Title />
+
+ Starts with T 
+
+ rendering the same component multiple times . 
+ 

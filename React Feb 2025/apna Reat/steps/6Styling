@@ -1,0 +1,5 @@
+we can write llstyling in single filebut the standards  is to write them corresponding css file .
+
+className should be given as the samecomponent name .
+
+react supports webpack. which  automatically exports and imports .

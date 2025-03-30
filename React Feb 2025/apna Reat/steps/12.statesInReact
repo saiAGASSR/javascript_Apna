@@ -1,0 +1,49 @@
+"use client";
+import { useState } from "react";
+
+
+
+const Counter = ()=>{
+    const [count,setCount] = useState(0);
+    
+    const handleClick=()=>{
+        setCount(count + 1)
+        count += 1   
+    }
+    return (
+        <>
+        <div>
+            <button onClick={handleClick}>Counter {count}</button>
+        </div>
+        </>
+    )
+}
+
+export default Counter;
+
+
+Here it is normal JS 
+
+we have written a function to increase count but it will not  increase onclick button 
+
+it will log rhe count value but in will not render in react component 
+
+
+
+In component the value is increasing of count 
+But not in DOM 
+
+component render 
+compopnent is a funtion which will bve rendered only once 
+if any changes occur in the component it willnot be re rendered so  
+values can be updatesd using state 
+the state illl store some value 
+if any change occur in the state the state will be responsible for rerendering of the component
+
+normalvariables.
+
+props - immutable .
+
+
+only setCount  triggers re rendering of the component /
+
