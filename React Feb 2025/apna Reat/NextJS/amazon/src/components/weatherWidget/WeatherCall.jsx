@@ -89,7 +89,7 @@ const WeatherCall = ({ setWeatherInfo }) => {
         <form onSubmit={handleSubmit}>
             <TextField id="city" label="Enter City Name" variant="outlined"  value={city} onChange={(e) => setCity(e.target.value)}/>
 
-          <Button variant="contained" type="submit" required>Submit</Button>
+          <Button variant="contained" type="submit" required style={{"marginLeft":"12px"  , "marginTop":"6px"}}>Submit</Button>
         </form>
 
           {error && <p style={{ color: "red" }}>{error}</p>}
