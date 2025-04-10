@@ -10,6 +10,7 @@ import ToDoApna from "@/components/toDoApna";
 import LotteryGame from "@/components/lotteryComponents";
 import BasicForm from "@/components/Forms/basic";
 import MainWeather from "@/components/weatherWidget/MainWeather";
+import List from "@/components/learnReact/RenderingList";
 import ChatbotUI from "@/components/ChatBotUI/ChatbotUI";
 
 export default function Home() {
@@ -29,7 +30,8 @@ export default function Home() {
       <Counter />
       <LikeButton  /> */}
 
-      <MainWeather />
+      {/* <MainWeather /> */}
+      <List />
 
       {/* <BasicForm />
 

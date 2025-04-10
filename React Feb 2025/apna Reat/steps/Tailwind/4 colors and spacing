@@ -1,0 +1,18 @@
+Color 
+    Text color 
+    Bg color
+
+Spacing 
+    Margin
+    Padding
+    Border
+https://tailwindcss.com/docs/padding
+
+
+    1 = 0.25 rem 
+    4  - 1 rem
+
+    m-4 - all  directions 
+    mx-4  - horixontal direction
+    my-4  - Vertica diraction 
+    

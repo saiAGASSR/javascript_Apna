@@ -1,0 +1,17 @@
+
+
+https://tailwindcss.com/docs/installation/using-postcss
+
+npm install tailwindcss @tailwindcss/postcss postcss
+
+two files will be created . 
+
+
+tailwind.config.css
+post.config.css
+
+these files will be cretaed and we should configured it . 
+
+content is the place where we define the places where to apply css  in  our project 
+
+we should create a css file and include the 

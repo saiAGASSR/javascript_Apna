@@ -1,0 +1,19 @@
+https://tailwindcss.com/
+
+utility first 
+
+pre build classes  so that 
+
+m - 4  means margin from all sides 
+
+it will be confusing for large projects maintaining all class names and writing css files for them . 
+
+
+reduces  confusion 
+bundle size  for production 
+
+cdn   
+attaching in html script is not good for development purpose . 
+
+▲ cdn.tailwindcss.com should not be used in (index):62 production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI https://tailw
+indcss.com/docs/installation
