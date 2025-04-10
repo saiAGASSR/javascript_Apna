@@ -10,6 +10,7 @@ import ToDoApna from "@/components/toDoApna";
 import LotteryGame from "@/components/lotteryComponents";
 import BasicForm from "@/components/Forms/basic";
 import MainWeather from "@/components/weatherWidget/MainWeather";
+import ChatbotUI from "@/components/ChatBotUI/ChatbotUI";
 
 export default function Home() {
 
@@ -38,6 +39,8 @@ export default function Home() {
       <ToDoApna />
 
       <LotteryGame    numberofticktets= {3}/> */}
+
+      <ChatbotUI />
 
       </main>
 
