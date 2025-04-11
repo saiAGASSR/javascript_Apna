@@ -13,7 +13,7 @@ export function SuggestionButtons({ onSelect }) {
           <button
             key={index}
             onClick={() => onSelect(text)}
-            className="border border-blue-500 text-blue-500 text-sm px-3 py-1 rounded-full hover:bg-blue-100 transition"
+            className="border border-grey-500 text-violet-700 text-sm px-3 py-1 rounded-full hover:bg-blue-100 transition"
 
           >
             {text}
