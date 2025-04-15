@@ -5,6 +5,7 @@ import { MessageList } from './MessageList';
 import { ChatInput } from './ChatInput';
 import { SuggestionButtons } from './SuggestionButtons';
 import { X } from 'lucide-react'; // for modern close icon
+import {responseObject} from './responseObject';
 
 export default function ChatbotUI() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,31 +23,69 @@ export default function ChatbotUI() {
         </div>
       </>
     ) },
-    { from: 'bot', text: 'Hi!  How can I assist you today?' },
+    { 
+      from: 'bot', 
+      text: 'Hi! How can I assist you today?', 
+      suggestions: [
+        "Recommend me a thriller movie",
+        "Show me popular action movies",
+        "Give me comedy movie suggestions",
+        "What's the latest movie release?",
+        "Tell me a movie based on my mood",
+        "Find a movie with my favorite actor"
+      ] 
+    }
+    
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
+  const response = responseObject; 
 
   const fetchBotResponse = async (userInput) => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    return `You said: "${userInput}".`;
+    console.log('User input:', userInput);
+    console.log('Response:', response);
+
+    
+    
+    return response;
   };
 
   const sendMessage = async (messageText = input) => {
     if (!messageText.trim()) return;
-
+  
+    // Add user message
     const newMessage = { from: 'user', text: messageText };
     setMessages((prev) => [...prev, newMessage]);
-    setInput('');
-
+    setInput(''); // Clear the input field
+  
+    // Set bot typing animation
     setIsTyping(true);
+  
+    // Fetch bot reply (assuming this fetches the bot response)
     const botReply = await fetchBotResponse(messageText);
+    console.log('Bot reply:', botReply);
+  
     setIsTyping(false);
-
-    setMessages((prev) => [...prev, { from: 'bot', text: botReply }]);
+  
+    // Check if we have suggestions in the previous message and remove them
+    setMessages((prev) => {
+      const updated = [...prev];
+      
+      // If the last bot message contains suggestions, remove them
+      const lastBotMsgIndex = [...updated].reverse().findIndex(msg => msg.from === 'bot' && msg.suggestions);
+      if (lastBotMsgIndex !== -1) {
+        const realIndex = updated.length - 1 - lastBotMsgIndex;
+        updated[realIndex] = { ...updated[realIndex], suggestions: [] }; // Remove suggestions
+      }
+  
+      // Add the new bot message with carousel and suggestions (if any)
+      return [...updated, { from: 'bot', carousel_results: botReply.carousel_results, text: botReply.carousel_name, suggestions: botReply.suggestions }];
+    });
   };
-
+  
+  
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);

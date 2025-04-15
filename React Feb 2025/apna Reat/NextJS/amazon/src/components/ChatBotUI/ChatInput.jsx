@@ -1,6 +1,8 @@
 'use client';
 import { SendHorizonal } from 'lucide-react'; // Optional: icon for send button
 
+
+
 export function ChatInput({ input, setInput, sendMessage, isTyping }) {
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {

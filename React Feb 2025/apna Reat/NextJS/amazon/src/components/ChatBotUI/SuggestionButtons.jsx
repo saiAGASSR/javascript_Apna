@@ -1,25 +1,20 @@
-export function SuggestionButtons({ onSelect }) {
-    const suggestions = [
-      'Recommend me a movie',
-      'What’s trending?',
-      'Top picks for me',
-      'Something for the weekend',
-      'Family-friendly shows'
-    ];
-  
-    return (
-      <div className="flex flex-wrap justify-center gap-2 px-4 py-2">
-        {suggestions.map((text, index) => (
-          <button
-            key={index}
-            onClick={() => onSelect(text)}
-            className="border border-grey-500 text-violet-700 text-sm px-3 py-1 rounded-full hover:bg-blue-100 transition"
+export function SuggestionButtons({ suggestions , istyping , setInput ,sendMessage }) {
 
-          >
-            {text}
-          </button>
-        ))}
-      </div>
-    );
-  }
-  
+  return (
+    <div className="flex flex-wrap justify-center gap-2 px-4 py-2 mt-10">
+              {suggestions.map((s, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setInput(s);
+                    sendMessage(s);
+                  }}
+                  className="border border-grey-500 text-violet-700 text-sm px-3 py-1 rounded-full hover:bg-blue-100 transition"
+                  disabled={istyping}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+  );
+}

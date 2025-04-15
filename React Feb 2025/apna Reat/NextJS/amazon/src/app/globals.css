@@ -1,5 +1,10 @@
 @import "tailwindcss";
-
+/* slick-carousel styles */
+/* @import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css"; */
+/* 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css'; */
 
 :root {
   --background: #ffffff;
@@ -20,4 +25,8 @@ body {
 
 .weatherInfoParagraphs{
   margin-bottom: 10px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(0, 0, 0) !important;
 }
