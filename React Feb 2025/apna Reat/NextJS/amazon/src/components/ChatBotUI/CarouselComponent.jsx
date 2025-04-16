@@ -21,7 +21,7 @@ export default function CarouselComponent({ items }) {
     slidesToScroll: 1,
     arrows: true,
     autoplay : true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 2000,
