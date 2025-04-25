@@ -6,6 +6,8 @@ import { ChatInput } from './ChatInput';
 import { SuggestionButtons } from './SuggestionButtons';
 import {responseObject} from './responseObject';
 import ChatHeader from './ChatHeader';
+import axios from "axios";
+
 
 export default function ChatbotUI() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,33 +24,33 @@ export default function ChatbotUI() {
           </span>
         </div>
       </>
-    ) },
-    { 
-      from: 'bot', 
-      text: 'Hi! How can I assist you today?', 
-      suggestions: [
-        "Recommend me a thriller movie",
-        "Show me popular action movies",
-        "Show me some comedy movie ",
-        "What's the latest movie release?"
-      ] 
-    }
-    
+    ) }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
   const response = responseObject; 
 
-  const fetchBotResponse = async (userInput) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log('User input:', userInput);
-    console.log('Response:', response);
-
+    const fetchBotResponse = async (userInput) => {
+      const body = {
+        userid: "15",
+        session_id: "session_15",
+        user_message: userInput
+      };
     
+      try {
+        const response = await axios.post("http://127.0.0.1:8000/chat", body);
+        return response.data; // ✅ RETURN the actual response data
+      } catch (error) {
+        console.error("Error in chat request", error);
+        return {
+          Bot_Response: "Sorry, something went wrong.",
+          Carousel_Results: [],
+          Search_Suggestions: []
+        };
+      }
+    };
     
-    return response;
-  };
 
   const sendMessage = async (messageText = input) => {
     if (!messageText.trim()) return;
@@ -68,25 +70,51 @@ export default function ChatbotUI() {
     setIsTyping(false);
   
     // Check if we have suggestions in the previous message and remove them
-    setMessages((prev) => {
-      const updated = [...prev];
-      
-      // If the last bot message contains suggestions, remove them
-      const lastBotMsgIndex = [...updated].reverse().findIndex(msg => msg.from === 'bot' && msg.suggestions);
-      if (lastBotMsgIndex !== -1) {
-        const realIndex = updated.length - 1 - lastBotMsgIndex;
-        updated[realIndex] = { ...updated[realIndex], suggestions: [] }; // Remove suggestions
-      }
+    setMessages((prev) => 
+        {
+            const updated = [...prev];
+            
+            // If the last bot message contains suggestions, remove them
+            const lastBotMsgIndex = [...updated].reverse().findIndex(msg => msg.from === 'bot' && msg.suggestions);
+            if (lastBotMsgIndex !== -1) {
+              const realIndex = updated.length - 1 - lastBotMsgIndex;
+              updated[realIndex] = { ...updated[realIndex], suggestions: [] }; // Remove suggestions
+            }
+        
+            // Add the new bot message with carousel and suggestions (if any)
+            return [...updated, { from: 'bot', carousel_results: botReply.Carousel_Results, text: botReply.Bot_Response, suggestions: botReply.Search_Suggestions }];
+        });
+
+  console.log("new messages", messages);
   
-      // Add the new bot message with carousel and suggestions (if any)
-      return [...updated, { from: 'bot', carousel_results: botReply.carousel_results, text: botReply.carousel_name, suggestions: botReply.suggestions }];
-    });
   };
   
+
+  useEffect(() => {
+    const fetchInitialBotMessage = async () => {
+      const botReply = await fetchBotResponse("my userid is 13 ");
+      console.log('Initial Bot reply:', botReply);
   
+      setMessages((prev) => [
+        ...prev,
+        {
+          from: 'bot',
+          carousel_results: botReply.Carousel_Results,
+          text: botReply.Bot_Response,
+          suggestions: botReply.Search_Suggestions
+        }
+      ]);
+    };
+  
+    fetchInitialBotMessage();
+  }, []);
+  
+
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);
+
+
 
   return (
     <>
