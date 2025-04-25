@@ -26,6 +26,7 @@ export default function ChatbotUI() {
       </>
     ) }
   ]);
+  const user_id = 13;
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
@@ -33,14 +34,16 @@ export default function ChatbotUI() {
 
     const fetchBotResponse = async (userInput) => {
       const body = {
-        userid: "15",
+        userid: `${user_id}`,
         session_id: "session_15",
         user_message: userInput
       };
+      console.log("body in request",body);
+      
     
       try {
         const response = await axios.post("http://127.0.0.1:8000/chat", body);
-        return response.data; // ✅ RETURN the actual response data
+        return response.data; // 
       } catch (error) {
         console.error("Error in chat request", error);
         return {
@@ -92,7 +95,7 @@ export default function ChatbotUI() {
 
   useEffect(() => {
     const fetchInitialBotMessage = async () => {
-      const botReply = await fetchBotResponse("my userid is 13 ");
+      const botReply = await fetchBotResponse(`My user id is ${user_id}`);
       console.log('Initial Bot reply:', botReply);
   
       setMessages((prev) => [
