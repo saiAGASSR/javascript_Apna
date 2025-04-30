@@ -23,14 +23,11 @@ export default function ChatbotUI() {
             
           
           <span className="font-bold text-base">
-            Hey Buddy        
+            Hi Master ,  I am Genie   
+
            
           </span>
-          <Avatar
-              alt='you'
-              src='https://i.imgur.com/yoUqYf3.png'
-              sx={{ width: 32, height: 32 }}
-            /> 
+          <p className='ml-2'>&#129502;</p>
           </div>
           <span className="text-sm text-gray-600">
             I can help you find movies, TV series, and live channels based on your preferences or searches.
@@ -39,10 +36,11 @@ export default function ChatbotUI() {
       </>
     )}
   ]);
-  const user_id = 13;
+  const user_id = 15;
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
+  const userInputFocus = useRef(null)
   const response = responseObject;
 
   const fetchBotResponse = async (userInput) => {
@@ -54,7 +52,7 @@ export default function ChatbotUI() {
     console.log("body in request", body);
 
     try {
-      const response = await axios.post("http://192.168.141.131:8000/chat", body);
+      const response = await axios.post("https://192.168.141.129:8000/chat", body);
       return response.data;
     } catch (error) {
       console.error("Error in chat request", error);
@@ -87,18 +85,12 @@ export default function ChatbotUI() {
     setMessages((prev) => {
       const updated = [...prev];
 
-      // If the last bot message contains suggestions, remove them
-      const lastBotMsgIndex = [...updated].reverse().findIndex(msg => msg.from === 'bot' && msg.suggestions);
-      if (lastBotMsgIndex !== -1) {
-        const realIndex = updated.length - 1 - lastBotMsgIndex;
-        updated[realIndex] = { ...updated[realIndex], suggestions: [] }; // Remove suggestions
-      }
 
       // Add the new bot message with carousel and suggestions (if any)
       return [...updated, { from: 'bot', carousel_results: botReply.Carousel_Results, text: botReply.Bot_Response, suggestions: botReply.Search_Suggestions }];
     });
 
-    console.log("new messages", messages);
+
   };
 
   useEffect(() => {
@@ -192,12 +184,10 @@ export default function ChatbotUI() {
               setInput={setInput}
               sendMessage={sendMessage}
               isTyping={isTyping}
+              userInputFocus={userInputFocus}
             />
 
-            {/* Footer Note */}
-            <p className="text-xs text-gray-400 text-center p-2 border-t border-gray-200 bg-white">
-              ⚠️ AI chat may produce inaccurate results. Don't share personal info.
-            </p>
+
           </motion.div>
         )}
       </AnimatePresence>

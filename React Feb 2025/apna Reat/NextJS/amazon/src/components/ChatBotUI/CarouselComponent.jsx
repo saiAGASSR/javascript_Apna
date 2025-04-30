@@ -6,6 +6,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function CarouselComponent({ items }) {
+  console.log("items in carousel components ", items);
+  console.log("items in carousel components  length", items.length);
+  
   let sliderRef = useRef(null);
   const play = () => {
     sliderRef.slickPlay();
@@ -15,9 +18,9 @@ export default function CarouselComponent({ items }) {
   };
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: items.length > 1,
     speed: 500,
-    slidesToShow: Math.min(items.length, 3),
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     autoplay : true,
@@ -38,12 +41,14 @@ export default function CarouselComponent({ items }) {
     ],
   };
 
+
+
   return (
-    <div className="w-full px-2 mt-4 mb-4">  
+    <div className="w-full px-2.5 mt-4 mb-4">  
       <Slider {...settings}>
         {items.map((item, idx) => (
           <a href={item.contentPath} target='_blank' rel="noopener noreferrer" key={idx}>
-          <div key={idx} className="px-2 ">
+          <div  className="px-2 ">
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-full border border-gray-200">
               <img
                 src={item.imgurl}

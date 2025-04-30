@@ -5,17 +5,32 @@ import Avatar from '@mui/material/Avatar';
 const ChatHeader = ({setIsOpen})=>{
     return (
         <div className="bg-gradient-to-br from-white to-blue-600 text-black p-4 flex justify-between items-center">
-            <div className="flex flex-row">
 
+            <div className='flex flex-row'>
             <Avatar
-            alt='bot'
-            src='https://i.imgur.com/AKwCiIP.jpeg'
-            sx={{ width: 36, height: 36 }}
-        /> 
+                alt='bot'
+                src='https://i.imgur.com/AKwCiIP.jpeg'
+                sx={{ width: 36, height: 36 }}
+            /> 
+                <div className="flex flex-col">
 
-            <span className="ml-2 text-2xl  md:text-xl font-semibold leading-tight mt-1.5">
-                 MyReco AI Assistant
-            </span>
+
+
+                <span className="ml-2 text-2xl  md:text-xl font-semibold leading-tight ">
+                    Genie
+                </span>
+
+                <span className="ml-2 text-sm  md:text-sm font leading-tight ">
+                 Your AI Assitant
+                 </span>
+
+                
+
+            </div>
+
+
+
+            
 
             </div>
 
