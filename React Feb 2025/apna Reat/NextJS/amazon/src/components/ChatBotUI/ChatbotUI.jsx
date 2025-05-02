@@ -55,7 +55,6 @@ export default function ChatbotUI() {
       session_id: sessionId,
       user_message: userInput
     };
-    console.log("body in request", body);
 
     try {
       const response = await axios.post("https://192.168.141.115:8000/chat", body);
@@ -83,7 +82,6 @@ export default function ChatbotUI() {
 
     // Fetch bot reply (assuming this fetches the bot response)
     const botReply = await fetchBotResponse(messageText);
-    console.log('Bot reply:', botReply);
 
     setIsTyping(false);
 
@@ -111,24 +109,18 @@ export default function ChatbotUI() {
   useEffect(() => {
     // Ensure sessionId is set only on the client side
     if (typeof window !== 'undefined') {
-      console.log("Setting session ID...");
       const existingSessionId = sessionStorage.getItem('sessionId');
-      console.log('Existing session ID:', existingSessionId);
 
       if (!existingSessionId) {
         const storedUserId = localStorage.getItem('userId');
         setUserId(storedUserId);
-        console.log("user id from local",storedUserId);
         
         const newSessionId = uuidv4();
-        console.log("New session ID:", newSessionId);
         sessionStorage.setItem('sessionId', newSessionId);
         setSessionId(newSessionId);
       } else {
         const storedUserId = localStorage.getItem('userId');
         setUserId(storedUserId);
-        console.log("user id from local",storedUserId);
-        console.log("Using existing session ID");
         setSessionId(existingSessionId);
       }
     }
@@ -138,7 +130,6 @@ export default function ChatbotUI() {
     const fetchInitialBotMessage = async () => {
       if (!sessionId) return; // Prevent request if session ID is not available yet
       const botReply = await fetchBotResponse(`My user id is ${userId}`);
-      console.log('Initial Bot reply:', botReply);
 
       setMessages((prev) => [
         ...prev,

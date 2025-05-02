@@ -2,7 +2,6 @@ import { X } from 'lucide-react'; // for modern close icon
 import Avatar from '@mui/material/Avatar';
 import ReplayIcon from '@mui/icons-material/Replay';
 
-
 const ChatHeader = ({setIsOpen , setClearChat})=>{
     return (
         <div className="bg-gradient-to-br from-white to-blue-600 text-black p-4 flex justify-between items-center">
@@ -14,8 +13,6 @@ const ChatHeader = ({setIsOpen , setClearChat})=>{
                 sx={{ width: 45, height: 40 }}
             /> 
                 <div className="flex flex-col">
-
-
 
                 <span className="ml-2 text-2xl  md:text-xl font-semibold leading-tight ">
                     RecoBot
@@ -29,10 +26,8 @@ const ChatHeader = ({setIsOpen , setClearChat})=>{
 
             </div>
 
-
             <div className='flex flex-row'>
                 <button className='text-black hover:text-red-600 transition mr-2' onClick={()=>setClearChat(true)}><ReplayIcon color='error' />  </button>
-
 
                 <button onClick={() => setIsOpen(false)} className="text-white hover:text-gray-200 transition">
                 <X className="w-5 h-5" />
@@ -40,10 +35,6 @@ const ChatHeader = ({setIsOpen , setClearChat})=>{
 
             </div>
 
-
-
-
-        
         </div>
 
     );
