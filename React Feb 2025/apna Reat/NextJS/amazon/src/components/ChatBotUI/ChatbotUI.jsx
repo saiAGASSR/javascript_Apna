@@ -1,89 +1,150 @@
 'use client';
+
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageList } from './MessageList';
 import { ChatInput } from './ChatInput';
 import { SuggestionButtons } from './SuggestionButtons';
-import {responseObject} from './responseObject';
+import { responseObject } from './responseObject';
 import ChatHeader from './ChatHeader';
+import axios from "axios";
+import { v4 as uuidv4 } from 'uuid';
+import Avatar from '@mui/material/Avatar';
+
 
 export default function ChatbotUI() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [userId,setUserId] = useState(15)
+  const [sessionId, setSessionId] = useState(null);
+  const [isOpen, setIsOpen] = useState(true);
+  const [clearChat,setClearChat]= useState(false);
   const [messages, setMessages] = useState([
     { from: 'bot', text: (
       <>
         <div>
+          <div className='flex row'>
+            
+          
           <span className="font-bold text-base">
-            Hi, I am Maya ❤️
+            Hi Master ,  I am Genie   
+
+           
           </span>
-          <br />
+          <p className='ml-2'>&#129502;</p>
+          </div>
           <span className="text-sm text-gray-600">
-            I am here to help you get your movie recommendations.
+            I can help you find movies, TV series, and live channels based on your preferences or searches.
           </span>
         </div>
       </>
-    ) },
-    { 
-      from: 'bot', 
-      text: 'Hi! How can I assist you today?', 
-      suggestions: [
-        "Recommend me a thriller movie",
-        "Show me popular action movies",
-        "Show me some comedy movie ",
-        "What's the latest movie release?"
-      ] 
-    }
-    
+    )}
   ]);
+
+
+
+  
+
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
-  const response = responseObject; 
+  const userInputFocus = useRef(null)
+  const response = responseObject;
 
   const fetchBotResponse = async (userInput) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log('User input:', userInput);
-    console.log('Response:', response);
+    const body = {
+      userid: `${userId}`,
+      session_id: sessionId,
+      user_message: userInput
+    };
 
-    
-    
-    return response;
+    try {
+      const response = await axios.post("https://192.168.141.115:8000/chat", body);
+      return response.data;
+    } catch (error) {
+      console.error("Error in chat request", error);
+      return {
+        Bot_Response: "Sorry, something went wrong.",
+        Carousel_Results: [],
+        Search_Suggestions: []
+      };
+    }
   };
 
   const sendMessage = async (messageText = input) => {
     if (!messageText.trim()) return;
-  
+
     // Add user message
     const newMessage = { from: 'user', text: messageText };
     setMessages((prev) => [...prev, newMessage]);
     setInput(''); // Clear the input field
-  
+
     // Set bot typing animation
     setIsTyping(true);
-  
+
     // Fetch bot reply (assuming this fetches the bot response)
     const botReply = await fetchBotResponse(messageText);
-    console.log('Bot reply:', botReply);
-  
+
     setIsTyping(false);
-  
+
     // Check if we have suggestions in the previous message and remove them
     setMessages((prev) => {
       const updated = [...prev];
-      
-      // If the last bot message contains suggestions, remove them
-      const lastBotMsgIndex = [...updated].reverse().findIndex(msg => msg.from === 'bot' && msg.suggestions);
-      if (lastBotMsgIndex !== -1) {
-        const realIndex = updated.length - 1 - lastBotMsgIndex;
-        updated[realIndex] = { ...updated[realIndex], suggestions: [] }; // Remove suggestions
-      }
-  
+
+
       // Add the new bot message with carousel and suggestions (if any)
-      return [...updated, { from: 'bot', carousel_results: botReply.carousel_results, text: botReply.carousel_name, suggestions: botReply.suggestions }];
+      return [...updated, { from: 'bot', carousel_results: botReply.Carousel_Results, text: botReply.Bot_Response, suggestions: botReply.Search_Suggestions }];
     });
+
+
   };
-  
-  
+  useEffect(() => {
+      setMessages((prevMessages)=>{
+        const restart = [...prevMessages];
+        restart.splice(1,restart.length)
+
+        return restart;
+      })
+      setClearChat(false)
+  }, [clearChat]);
+
+  useEffect(() => {
+    // Ensure sessionId is set only on the client side
+    if (typeof window !== 'undefined') {
+      const existingSessionId = sessionStorage.getItem('sessionId');
+
+      if (!existingSessionId) {
+        const storedUserId = localStorage.getItem('userId');
+        setUserId(storedUserId);
+        
+        const newSessionId = uuidv4();
+        sessionStorage.setItem('sessionId', newSessionId);
+        setSessionId(newSessionId);
+      } else {
+        const storedUserId = localStorage.getItem('userId');
+        setUserId(storedUserId);
+        setSessionId(existingSessionId);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const fetchInitialBotMessage = async () => {
+      if (!sessionId) return; // Prevent request if session ID is not available yet
+      const botReply = await fetchBotResponse(`My user id is ${userId}`);
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          from: 'bot',
+          carousel_results: botReply.Carousel_Results,
+          text: botReply.Bot_Response,
+          suggestions: botReply.Search_Suggestions
+        }
+      ]);
+    };
+
+    fetchInitialBotMessage();
+  }, [sessionId]);
+
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);
@@ -114,11 +175,11 @@ export default function ChatbotUI() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-0 right-0 md:bottom-4 md:right-4 w-full md:w-80 h-full md:max-h-[80vh] bg-white rounded-none md:rounded-2xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50"
+            className="xl:absolute  xl:mr-65 xl:w-[100vh] xl:h-[100vh] fixed bottom-0 right-0 md:bottom-4 md:right-4 w-full md:w-100 md:h-full md:max-h-[100vh] bg-white rounded-none md:rounded-2xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50"
           >
 
             {/* Header */}
-            <ChatHeader setIsOpen={setIsOpen} />
+            <ChatHeader setIsOpen={setIsOpen} setClearChat={setClearChat} />
 
 
             {/* Messages */}
@@ -130,20 +191,16 @@ export default function ChatbotUI() {
               sendMessage={sendMessage}
             />
 
-           
-
             {/* Input */}
             <ChatInput
               input={input}
               setInput={setInput}
               sendMessage={sendMessage}
               isTyping={isTyping}
+              userInputFocus={userInputFocus}
             />
 
-            {/* Footer Note */}
-            <p className="text-xs text-gray-400 text-center p-2 border-t border-gray-200 bg-white">
-              ⚠️ AI chat may produce inaccurate results. Don't share personal info.
-            </p>
+
           </motion.div>
         )}
       </AnimatePresence>
