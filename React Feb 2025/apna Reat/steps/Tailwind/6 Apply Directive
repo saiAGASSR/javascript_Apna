@@ -1,0 +1,12 @@
+@apply 
+
+.box class  {
+    @@ all tailwind classes that are commen 
+}
+
+
+
+
+pririty to be given at the end of the code 
+
+whatever is written in the end of the code . 
