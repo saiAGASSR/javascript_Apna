@@ -1,21 +1,44 @@
-// app/api/chat/route.js
+import axios from 'axios';
+import https from 'https';
+
 export async function POST(req) {
-  const body = await req.json();
-  const userInput = body?.messages?.[1]?.content || "";
-  // Wait 2 seconds before returning the response (simulate thinking)
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  try {
+    const body = await req.json();
+    console.log("Received body:", body); 
 
-  // Mimic OpenAI-like response
-  const response = {
-    choices: [
-      {
-        message: {
-          role: "assistant",
-          content: `You said: ${userInput}`,
-        },
-      },
-    ],
-  };
+    const { user_message, session_id, userid } = body;
 
-  return Response.json(response);
+    if (!user_message || !session_id || !userid) {
+      return new Response(
+        JSON.stringify({ error: "Missing required fields: user_message, session_id, or userid" }),
+        { status: 400 }
+      );
+    }
+
+    // Bypass self-signed HTTPS issues (development only!)
+    const httpsAgent = new https.Agent({
+      rejectUnauthorized: false, // ⚠️ Only use for dev/testing
+    });
+
+    const response = await axios.post(
+      "https://192.168.141.115:8000/chat",
+      { user_message, session_id, userid },
+      { httpsAgent }
+    );
+
+    return new Response(JSON.stringify(response.data), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    console.error("Error in chat request:", error.message);
+
+    return new Response(
+      JSON.stringify({
+        error: "Something went wrong on the server",
+        details: error.message,
+      }),
+      { status: 500 }
+    );
+  }
 }

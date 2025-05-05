@@ -13,8 +13,10 @@ import Avatar from '@mui/material/Avatar';
 
 
 export default function ChatbotUI() {
+  const [userId,setUserId] = useState(15)
   const [sessionId, setSessionId] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+  const [clearChat,setClearChat]= useState(false);
   const [messages, setMessages] = useState([
     { from: 'bot', text: (
       <>
@@ -36,7 +38,11 @@ export default function ChatbotUI() {
       </>
     )}
   ]);
-  const user_id = 13;
+
+
+
+  
+
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
@@ -45,14 +51,13 @@ export default function ChatbotUI() {
 
   const fetchBotResponse = async (userInput) => {
     const body = {
-      userid: `${user_id}`,
+      userid: `${userId}`,
       session_id: sessionId,
       user_message: userInput
     };
-    console.log("body in request", body);
 
     try {
-      const response = await axios.post("https://192.168.1.3:8000/chat", body);
+      const response = await axios.post("https://192.168.141.115:8000/chat", body);
       return response.data;
     } catch (error) {
       console.error("Error in chat request", error);
@@ -77,7 +82,6 @@ export default function ChatbotUI() {
 
     // Fetch bot reply (assuming this fetches the bot response)
     const botReply = await fetchBotResponse(messageText);
-    console.log('Bot reply:', botReply);
 
     setIsTyping(false);
 
@@ -92,21 +96,31 @@ export default function ChatbotUI() {
 
 
   };
+  useEffect(() => {
+      setMessages((prevMessages)=>{
+        const restart = [...prevMessages];
+        restart.splice(1,restart.length)
+
+        return restart;
+      })
+      setClearChat(false)
+  }, [clearChat]);
 
   useEffect(() => {
     // Ensure sessionId is set only on the client side
     if (typeof window !== 'undefined') {
-      console.log("Setting session ID...");
       const existingSessionId = sessionStorage.getItem('sessionId');
-      console.log('Existing session ID:', existingSessionId);
 
       if (!existingSessionId) {
+        const storedUserId = localStorage.getItem('userId');
+        setUserId(storedUserId);
+        
         const newSessionId = uuidv4();
-        console.log("New session ID:", newSessionId);
         sessionStorage.setItem('sessionId', newSessionId);
         setSessionId(newSessionId);
       } else {
-        console.log("Using existing session ID");
+        const storedUserId = localStorage.getItem('userId');
+        setUserId(storedUserId);
         setSessionId(existingSessionId);
       }
     }
@@ -115,8 +129,7 @@ export default function ChatbotUI() {
   useEffect(() => {
     const fetchInitialBotMessage = async () => {
       if (!sessionId) return; // Prevent request if session ID is not available yet
-      const botReply = await fetchBotResponse(`My user id is ${user_id}`);
-      console.log('Initial Bot reply:', botReply);
+      const botReply = await fetchBotResponse(`My user id is ${userId}`);
 
       setMessages((prev) => [
         ...prev,
@@ -162,11 +175,11 @@ export default function ChatbotUI() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className=" md:bottom-4 md:right-4 w-full md:w-100  h-full md:max-h-[100vh] bg-white rounded-none md:rounded-2xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50"
+            className="xl:absolute  xl:mr-65 xl:w-[100vh] xl:h-[100vh] sm-fixed fixed bottom-0 right-0 md:bottom-4 md:right-4 w-full md:w-100 md:h-full h-full md:max-h-[100vh] bg-white rounded-none md:rounded-2xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50"
           >
 
             {/* Header */}
-            <ChatHeader setIsOpen={setIsOpen} />
+            <ChatHeader setIsOpen={setIsOpen} setClearChat={setClearChat} />
 
 
             {/* Messages */}
