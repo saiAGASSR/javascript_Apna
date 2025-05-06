@@ -9,7 +9,7 @@ const ChatHeader = ({setIsOpen , setClearChat})=>{
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className="bg-gradient-to-br from-white to-blue-600 text-black p-4 flex justify-between items-center">
+        <div className="bg-linear-to-bl from-violet-500 to-fuchsia-500 text-black p-4 flex justify-between items-center">
 
             <div className='flex flex-row'>
                 <Avatar

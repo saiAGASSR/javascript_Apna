@@ -1,42 +1,41 @@
 import axios from 'axios';
-import https from 'https';
 
 export async function POST(req) {
   try {
     const body = await req.json();
-    console.log("Received body:", body); 
-
     const { user_message, session_id, userid } = body;
 
     if (!user_message || !session_id || !userid) {
       return new Response(
-        JSON.stringify({ error: "Missing required fields: user_message, session_id, or userid" }),
+        JSON.stringify({ error: "Missing required fields" }),
         { status: 400 }
       );
     }
 
-    // Bypass self-signed HTTPS issues (development only!)
-    const httpsAgent = new https.Agent({
-      rejectUnauthorized: false, // ⚠️ Only use for dev/testing
-    });
+    console.log("Received request body:", body);
 
-    const response = await axios.post(
-      "https://192.168.141.115:8000/chat",
-      { user_message, session_id, userid },
-      { httpsAgent }
-    );
+    const BACKEND_URL = "http://13.232.27.217:9090/chat";
+
+    const response = await axios.post(BACKEND_URL, {
+      user_message,
+      session_id,
+      userid,
+    });
+    console.log("Response from backend:", response.data);
+    
 
     return new Response(JSON.stringify(response.data), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' }
     });
+
   } catch (error) {
     console.error("Error in chat request:", error.message);
 
     return new Response(
       JSON.stringify({
-        error: "Something went wrong on the server",
-        details: error.message,
+        error: "Internal Server Error",
+        details: error.message
       }),
       { status: 500 }
     );
