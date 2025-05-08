@@ -30,7 +30,7 @@ export async function POST(req) {
     });
 
   } catch (error) {
-    console.error("Error in chat request:", error.message);
+    console.error("Error in chat request:", error);
 
     return new Response(
       JSON.stringify({

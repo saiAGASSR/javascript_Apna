@@ -55,30 +55,37 @@ export default function ChatbotUI() {
       session_id: sessionId,
       user_message: userInput,
     };
+    console.log("Sending body:", body);  // Log the body you're sending
+    console.log("Session ID:", sessionId);  // Log the session ID
   
     try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',  // Specify the content type as JSON
-        },
-        body: JSON.stringify(body),
-      });
+        const response = await axios.post(
+          'http://13.232.27.217:9090/chat',
+          body
+        );
+      console.log("Response headers:", response.headers);  // Log the response headers
+      console.log("response status:", response.status);  // Log the response status
+      console.log(response.headers['x-process-time']); // Access a specific header
+
+      
+
+      
   
       console.log("Sent body:", body);  // Log the body you're sending
   
-      if (!response.ok) {
-        // Handle non-OK responses (e.g., 4xx or 5xx errors)
-        throw new Error(`Request failed with status: ${response.status}`);
-      }
+     
   
       // Parse the JSON response
-      const responseData = await response.json();
-      console.log("Received response:", responseData);
+      console.log("Response data:", response.data);  // Log the response data
+      
   
-      return responseData;  // Return the parsed JSON response
+      return response.data;  // Return the parsed JSON response
     } catch (error) {
       console.error("Error in chat request:", error);
+      if(error.code === 'ECONNABORTED'){
+        console.error("Timeout error:", error.message);
+      }
+
       return {
         Bot_Response: "Sorry, something went wrong.",
         Carousel_Results: [],
@@ -219,6 +226,11 @@ export default function ChatbotUI() {
               isTyping={isTyping}
               userInputFocus={userInputFocus}
             />
+
+            {/* Footer Note */}
+            <p className="text-xs text-gray-600 text-center p-2 border-t border-gray-200 bg-white">
+              Note: AI chat may produce inaccurate results. Don't share personal info.
+            </p>
 
 
           </motion.div>
