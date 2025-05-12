@@ -10,10 +10,17 @@ import ChatHeader from './ChatHeader';
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import Avatar from '@mui/material/Avatar';
+import MovingIcon from './MovingIcon';
 
 
 export default function ChatbotUI() {
   const [userId,setUserId] = useState(15)
+  const [position, setPosition] = useState(
+    {
+      x:0,
+      y:0
+    }
+  )
   const [sessionId, setSessionId] = useState(null);
   const [isOpen, setIsOpen] = useState(true);
   const [clearChat,setClearChat]= useState(false);
@@ -203,10 +210,24 @@ export default function ChatbotUI() {
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
             className="fixed bottom-0 right-0 w-full h-full xl:w-1/2 xl:mr-80 rounded-xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50  bg-cover bg-no-repeat bg-center"
+            style={{cursor:'none'}}
+            onPointerMove={(e)=>{
+              console.log("x,y",e.clientX);
+              console.log("x,y",e.clientY);
+              
+              setPosition({
+                x: e.clientX - 380,
+                y: e.clientY
+              })
+            }}
             >
+
+
+              
 
             {/* Header */}
             <ChatHeader setIsOpen={setIsOpen} setClearChat={setClearChat} />
+            { (position.x !==0 && position.y !== 0) && < MovingIcon  position={position}/>}
 
 
             {/* Messages */}
