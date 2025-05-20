@@ -1,3 +1,6 @@
+'use client';
+
+import MicToGoogleSpeech from "@/components/ChatBotUI/MicComponent";
 import GetUserIdForm from "@/components/GetUserIdForm";
 import MainWeather from "@/components/weatherWidget/MainWeather";
 
@@ -14,8 +17,9 @@ export default function Home() {
        
     
       <GetUserIdForm />
-
+      
       </main>
+      <MicToGoogleSpeech />
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
        

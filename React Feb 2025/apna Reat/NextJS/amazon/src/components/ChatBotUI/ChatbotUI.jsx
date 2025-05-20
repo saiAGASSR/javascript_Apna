@@ -67,7 +67,7 @@ export default function ChatbotUI() {
   
     try {
         const response = await axios.post(
-          'http://13.232.27.217:9090/chat',
+          'https://alphaapi.myreco.in/chat',
           body
         );
       console.log("Response headers:", response.headers);  // Log the response headers
@@ -210,16 +210,6 @@ export default function ChatbotUI() {
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
             className="fixed bottom-0 right-0 w-full h-full xl:w-1/2 xl:mr-80 rounded-xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50  bg-cover bg-no-repeat bg-center"
-            style={{cursor:'none'}}
-            onPointerMove={(e)=>{
-              console.log("x,y",e.clientX);
-              console.log("x,y",e.clientY);
-              
-              setPosition({
-                x: e.clientX - 380,
-                y: e.clientY
-              })
-            }}
             >
 
 
@@ -227,7 +217,6 @@ export default function ChatbotUI() {
 
             {/* Header */}
             <ChatHeader setIsOpen={setIsOpen} setClearChat={setClearChat} />
-            { (position.x !==0 && position.y !== 0) && < MovingIcon  position={position}/>}
 
 
             {/* Messages */}
