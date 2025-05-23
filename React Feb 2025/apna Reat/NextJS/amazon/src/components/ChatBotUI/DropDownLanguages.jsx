@@ -40,26 +40,40 @@ export default function SelectLabels({setSelectedLanguageCode,selectedLanguageCo
   };
 
   return (
-    <div className='mt-1'>
-      <FormControl sx={{ xs: 1, minWidth: 10 }}>
-        <InputLabel id="language-select-label">Language</InputLabel>
-        <Select
-          labelId="language-select-label"
-          id="language-select"
-          value={selectedLanguageCode}
-          label="Language"
-          onChange={handleChange}
-        >
-          <MenuItem value="English">
-            <em>None</em>
-          </MenuItem>
-          {languages.map((lang) => (
-            <MenuItem key={lang.code} value={lang.code}>
-              {lang.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
+            <FormControl
+            size="small"
+            sx={{
+                minWidth: 50,
+                height: 40,
+                '& .MuiInputBase-root': {
+                height: 36,
+                fontSize: '0.875rem', // text-sm
+                },
+                '& .MuiInputLabel-root': {
+                fontSize: '0.75rem', // text-xs
+                top: '5px',
+                },
+                 mt: 1,
+            }}
+            >
+            <InputLabel id="language-select-label">Language</InputLabel>
+            <Select
+                labelId="language-select-label"
+                id="language-select"
+                value={selectedLanguageCode}
+                label="Language"
+                onChange={handleChange}
+            >
+                <MenuItem value="English">
+                <em>None</em>
+                </MenuItem>
+                {languages.map((lang) => (
+                <MenuItem key={lang.code} value={lang.code}>
+                    {lang.label}
+                </MenuItem>
+                ))}
+            </Select>
+            </FormControl>
+
   );
 }

@@ -13,7 +13,7 @@ import Avatar from '@mui/material/Avatar';
 import MovingIcon from './MovingIcon';
 
 
-export default function ChatbotUI() {
+export default function ChatbotUI({voiceinput}) {
   const [userId,setUserId] = useState(15)
   const [position, setPosition] = useState(
     {
@@ -45,6 +45,7 @@ export default function ChatbotUI() {
       </>
     )}
   ]);
+  let jwtToken ;
 
 
 
@@ -61,13 +62,14 @@ export default function ChatbotUI() {
       userid: `${userId}`,
       session_id: sessionId,
       user_message: userInput,
+      jwt_toket : jwtToken
     };
     console.log("Sending body:", body);  // Log the body you're sending
     console.log("Session ID:", sessionId);  // Log the session ID
   
     try {
         const response = await axios.post(
-          'https://alphaapi.myreco.in/chat',
+          'http://127.0.0.1:8000/chat',
           body
         );
       console.log("Response headers:", response.headers);  // Log the response headers
@@ -194,7 +196,7 @@ export default function ChatbotUI() {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.2 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-4 right-4 bg-gradient-to-br from-blue-600 to-indigo-600 text-white p-3 rounded-full shadow-xl hover:from-blue-700 hover:to-indigo-700 z-50"
+            className="fixed bottom-4 right-4 bg-gradient-to-br from-blue-600 to-indigo-600 text-white p-3 rounded-full shadow-xl hover:from-blue-700 hover:to-indigo-700 z-50 shadow-xl/30 shadow-cyan-500/50 inset-shadow-sm inset-shadow-indigo-500/50"
           >
             💬
           </motion.button>
@@ -209,7 +211,7 @@ export default function ChatbotUI() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-0 right-0 w-full h-full xl:w-1/2 xl:mr-80 rounded-xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50  bg-cover bg-no-repeat bg-center"
+            className="fixed bottom-0 right-0 w-full h-full xl:w-1/2 xl:mr-80 rounded-xl shadow-lg flex flex-col overflow-hidden border border-gray-200 z-50  bg-black bg-no-repeat bg-center shadow-xl/30 shadow-cyan-500/50 inset-shadow-sm inset-shadow-indigo-500/50 "
             >
 
 
@@ -235,6 +237,7 @@ export default function ChatbotUI() {
               sendMessage={sendMessage}
               isTyping={isTyping}
               userInputFocus={userInputFocus}
+              voiceinput={voiceinput}
             />
 
             {/* Footer Note */}

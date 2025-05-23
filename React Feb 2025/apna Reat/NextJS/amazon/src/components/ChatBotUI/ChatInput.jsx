@@ -8,7 +8,8 @@ import SelectLabels from './DropDownLanguages';
 
 
 
-export function ChatInput({ input, setInput, sendMessage, isTyping, userInputFocus }) {
+
+export function ChatInput({ input, setInput, sendMessage, isTyping, userInputFocus,voiceinput }) {
   const [selectedLanguageCode, setSelectedLanguageCode] = useState('en-IN');
   const [recording, setRecording] = useState(false);
   const mediaRecorderRef = useRef(null);
@@ -81,7 +82,11 @@ useEffect(() => {
 
 
 
-  const handleMicClick = async () => {
+  const handleGoogleMicClick = async () => {
+
+    if (recording) {
+      return;
+    }
 
 
   try {
@@ -148,25 +153,28 @@ useEffect(() => {
         new Uint8Array(buffer)
           .reduce((data, byte) => data + String.fromCharCode(byte), '')
       );
+      console.log("audio and its type",audioBase64);
+      
 
       const GOOGLE_API_KEY = 'AIzaSyD8GlSK43dHXTFzfxN0BzvIItShxms3KjM';
       const response = await fetch(
-        `https://speech.googleapis.com/v1/speech:recognize?key=${GOOGLE_API_KEY}`,
+        `bharghavUrl`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            config: {
-              encoding: 'WEBM_OPUS',
-              sampleRateHertz: 48000,
-              languageCode: selectedLanguageCode,
-            },
-            audio: {
-              content: audioBase64,
-            },
+
+              audio_text : audioBase64,
+              language_code : selectedLanguageCode
+            
           }),
         }
       );
+
+      if (!response.ok) {
+          const errText = await response.text();
+          throw new Error(errText);
+        }
 
       const result = await response.json();
       const transcription = result.results?.map(r => r.alternatives[0].transcript).join('\n') || '';
@@ -186,6 +194,8 @@ useEffect(() => {
   }
 };
 
+const isVoiceOn = voiceinput === 'on';
+
 
 
 
@@ -196,61 +206,72 @@ useEffect(() => {
 
  return (
   <div className="border-t border-gray-200 bg-white px-3 py-2 flex items-center gap-2">
-    {/* Google Mic Button (Node backend) */}
-    <button
-      onClick={handleMicClick}
-      type="button"
-      className="text-gray-500 hover:text-blue-600"
-      disabled = {listening}
-    >
-      {recording ? (
-        <FcGoogle  className="w-5 h-5 animate-pulse"  />
-      ) : (
-        <FaGoogle  className="w-5 h-5" />
-      )}
-    </button>
+  {isVoiceOn && <>
+          
+          {/* React Speech Recognition Mic Button */}
+          <button
+            onClick={handleReactMicClick}
+            type="button"
+            aria-label="Start mic input using React Speech Recognition"
+            className="text-gray-500 hover:text-blue-600"
+            disabled={listening || isTyping}
+          >
+            {listening ? (
+              <Mic className="w-5 h-5 animate-pulse" color="red" />
+            ) : (
+              <Mic className="w-5 h-5" />
+            )}
+          </button>
 
-    {/* Input Text Area */}
-    <textarea
-      rows={1}
-      value={input}
-      onChange={(e) => setInput(e.target.value)}
-      onKeyDown={handleKeyPress}
-      placeholder={isTyping ? 'Bot is typing...' : 'Type or use mic...'}
-      className="flex-1 resize-none rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
-      disabled={isTyping || isTyping }
-      ref={userInputFocus}
-    />
+          {/* Google Cloud Speech-to-Text Mic Button */}
+          <button
+            onClick={handleGoogleMicClick}
+            type="button"
+            aria-label="Start mic input using Google Speech-to-Text"
+            className="text-gray-500 hover:text-blue-600"
+            disabled={recording || isTyping}
+          >
+            {recording ? (
+              <FcGoogle className="w-5 h-5 animate-pulse" />
+            ) : (
+              <FaGoogle className="w-5 h-5" />
+            )}
+          </button>
 
-    {/* React Speech Recognition Mic Button */}
-    <button
-      onClick={handleReactMicClick}
-      type="button"
-      className="text-gray-500 hover:text-blue-600"
-      disabled = {recording || isTyping }
-    >
-      {listening ? (
-        <Mic className="w-5 h-5 animate-pulse" color="red" />
-      ) : (
-        <Mic className="w-5 h-5" />
-      )}
-    </button>
+          {/* Language Selector */}
+          <SelectLabels 
+            setSelectedLanguageCode={setSelectedLanguageCode}
+            selectedLanguageCode={selectedLanguageCode}
+          />
+          </>
+  }
 
-        <SelectLabels  setSelectedLanguageCode={setSelectedLanguageCode} selectedLanguageCode={selectedLanguageCode} />
+  {/* Input Text Area */}
+  <textarea
+    rows={1}
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    onKeyDown={handleKeyPress}
+    placeholder={isTyping ? 'Bot is typing...' : 'Ask me regaqrding movies'}
+    className="flex-1 resize-none rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+    disabled={isTyping}
+    ref={userInputFocus}
+  />
 
-    <button
-      onClick={() => sendMessage()}
-      disabled={!input.trim() || isTyping}
-      className={`p-2 rounded-full transition ${
-        !input.trim() || isTyping
-          ? 'bg-gray-300 text-white cursor-not-allowed'
-          : 'bg-blue-600 hover:bg-blue-700 text-white'
-      }`}
-    >
-      <SendHorizonal className="w-4 h-4" />
-    </button>
+  {/* Send Button */}
+  <button
+    onClick={sendMessage}
+    disabled={!input.trim() || isTyping}
+    aria-label="Send message"
+    className={`p-2 rounded-full transition ${
+      !input.trim() || isTyping
+        ? 'bg-gray-300 text-white cursor-not-allowed'
+        : 'bg-blue-600 hover:bg-blue-700 text-white'
+    }`}
+  >
+    <SendHorizonal className="w-4 h-4" />
+  </button>
+</div>
 
-
-  </div>
 );
 }
